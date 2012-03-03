@@ -1,0 +1,169 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{giuditta} % pacchetto Giuditta: il migliore!
+\RequirePackage{wasysym}
+\RequirePackage{amssymb}
+\RequirePackage{stmaryrd} 
+\RequirePackage{pifont}
+\RequirePackage[mathcal]{eucal} 
+\RequirePackage{mathrsfs}
+\RequirePackage{fancyhdr}
+\RequirePackage{amsthm}
+\RequirePackage{makeidx}
+\RequirePackage[latin1]{inputenc}
+\RequirePackage[italian,english]{babel}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[italian]{varioref}
+\RequirePackage{wrapfig}
+\RequirePackage{amsfonts}
+
+
+
+
+
+\def\@makechapterhead#1{%  faccio in modo che i capitoli vengano sempre stampati in sans serif
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont%
+    \ifnum \c@secnumdepth >\m@ne%
+        \centering \Large \bfseries \sffamily \@chapapp\space \thechapter%
+        \par\nobreak%
+        \vskip 20\p@%
+    \fi%
+    \interlinepenalty\@M%
+    \Huge \bfseries \sffamily #1\par\nobreak%
+    \vskip 40\p@%
+  }}%
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%         % sezioni in sans serif
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\Large \bfseries \sffamily}}
+
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%    % sottosezioni in sans serif
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\large \bfseries \sffamily}}
+
+\renewcommand{\thechapter}{\Roman{chapter}}         % num capitoli in romano
+\renewcommand{\thesection}{\arabic{section}}        % num sezioni senza capitoli di mezzo
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}} % num sottos solo numeri sezioni
+
+\pagestyle{fancy}                                   % pacchetto fancyhdr: configuro
+\fancyfoot{}
+\fancyhead{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[RE]{\footnotesize \rightmark}
+\fancyhead[LO]{\footnotesize \leftmark}
+\fancyfoot[RE,LO]{%\fontencoding{T1}\fontfamily{uaq}\fontseries{m}\fontshape{n}\fontsize{10}{12pt}\selectfont 
+G.L.}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.0pt}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{1.85cm}
+%\addtolength{\headwidth}{\marginparwidth}
+
+
+%\addtolength{\voffset}{-2cm} \addtolength{\textheight}{3cm}  % aggiusto il layout di pagina
+%\addtolength{\textwidth}{0.5cm}
+%\addtolength{\hoffset}{-0.5cm}
+%\addtolength{\marginparwidth}{-12pt}
+
+\@addtoreset{equation}{section} % equazioni numerate con le sezioni
+\renewcommand{\theequation}%
+  {\arabic{chapter}.\thesection.\arabic{equation}}
+\renewcommand{\thefigure}%
+  {\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thetable}%
+  {\arabic{chapter}.\arabic{table}}
+
+\renewcommand{\subparagraph}{\@startsection%
+{subparagraph}%Io usero' questo comando solo all'inizio di ogni nuovo capitolos
+{5}%
+{1em}%
+{\baselineskip}
+{-\fontdimen1\font plus -\fontdimen3\font minus -\fontdimen4\font}%
+{\Huge}
+}
+
+
+\newcommand{\rem}[1]{\mathrm{#1}}                           % comandi che uso spesso
+\newcommand{\mt}[1]{\mathscr{#1}}
+\newcommand{\mi}[1]{\mathit{#1}}
+\newcommand{\bef}[1]{\mathbf{#1}}
+\newcommand{\de}{\mathrm{d}}
+\newcommand{\asinh}{\sinh^{-1}}
+\newcommand{\acosh}{\cosh^{-1}}
+\newcommand{\ein}{Einstein}
+\newcommand{\poin}{Poincar\'e}
+\newcommand{\eqref}[1]{(\ref{#1})}
+
+\newcommand{\enf}[1]{\emph{#1}}
+
+\newenvironment{citaz}{\begin{quote}}{\end{quote}} %nel caso si volesse cambiare il modo di fare citazioni
+
+%\newcommand{\enf}[1]{%          Un italic un po' modificato
+%\fontencoding{T1}%
+%\fontfamily{pzc}%
+%\fontseries{m}%
+%\fontshape{n}%
+%\fontsize{10}{12pt}%
+%\selectfont#1%
+%\normalfont}
+
+%\newcommand{\cambiosec}{%       Font per sezioni e sottosezioni
+%\fontencoding{T1}%
+%\fontfamily{maksf}%
+%\fontseries{m}%
+%\fontshape{n}%
+%\fontsize{10}{12pt}%
+%\selectfont}%
+
+%\newcommand{\cambiosubp}{%      Font per le prime lettere di ogni capitolo
+%\fontencoding{T1}%
+%\fontfamily{anttl}%
+%\fontseries{bx}%
+%\fontshape{n}%
+%\fontsize{10}{12pt}%
+%\selectfont}
+
+\newcommand{\bibliografia}[1]{%
+\clearpage%
+\addcontentsline{toc}{chapter}{\numberline{}Bibliografia}%
+\bibliography{#1}}                                          % comando bibliografia: mi aggiunge la pagina della
+                                                            % bibliografia all'indice, oltre a stamparmi la
+                                                            % bibliografia
+
+
+\newcommand{\indiceanalitico}{%
+\clearpage%
+\addcontentsline{toc}{chapter}{\numberline{}Indice analitico}
+\printindex}                                                % come sopra ma fa l'indice analitico
+
+
+\bibliographystyle{plain}                                   % definisco lo stile della bibliografia
+
+
+
+
+
+
+
+
+
+
+
+\swapnumbers                                                % opzioni del pacchetto amsthm
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{proposizione}[teorema]{Proposizione}
+\newtheorem{lemma}[teorema]{Lemma}
+\newtheorem{corollario}[teorema]{Corollario}
+
+\theoremstyle{definition}
+\newtheorem{definizione}[teorema]{Definizione}
+\newtheorem{esempio}[teorema]{Esempio}
+\newtheorem{principio}[teorema]{Principio}
+\theoremstyle{remark}
+\newtheorem{osservazione}[teorema]{Osservazione}
+\newtheorem*{observazione}{Osservazione}                    % osservazioni non numerate
+\newenvironment{dimostrazione}{\begin{proof}[\textsc{Dimostrazione}]}{\end{proof}}  % per avere la scritta
+ % dimostrazione nello stesso stile di GdM 
