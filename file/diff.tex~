@@ -1,0 +1,35 @@
+\section{Un tentativo di confronto\ldots}
+In quest'ultima sezione cercheremo, come anticipato, di confrontare i
+lavori dei due scienziati. Procediamo con ordine.
+\subsection[Il punto di partenza]{Il punto di partenza e le trasformazioni di Lorentz}
+
+\paragraph{\ein} Egli parte dalle asimmetrie dell'elettromagnetismo, e,
+postula, grazie anche al fallimento dell'esperimento di Michelson e
+Morley, sia il principio di relativit\`a, sia l'invarianza della
+velocit\`a della luce. In questo modo riesce a giungere, con pochi passi
+e senza ulteriori ipotesi, alle trasformazioni di Lorentz.
+
+\paragraph{\poin} Il francese invece parte dai risultati contrastanti
+tra il fenomeno dell'aberrazione, e l'esperimento di Michelson; grazie
+al principio di relativit\`a e all'assunzione (debita) dell'omogeneit\`a
+e isotropia dello spazio, egli giunge, con un procedimento del tutto
+generale, a delle trasformazioni tra sistemi di coordinate inerziali,
+che tuttavia non sono n\'e quelle di Galileo, n\'e quelle di
+Lorentz. Per trovarle egli pone, come gi\`a ricordato, $K = c^2$,
+nella~\eqref{eq:di}, cosa che gli garantisce, tramite il teorema di
+trasformazione delle velocit\`a, la costanza della velocit\`a della luce
+(su cui per\`o non insiste).
+
+\paragraph{}
+I due giungono entrambi alle trasformazioni di Lorentz dunque, in
+maniera totalmente differente; \ein{} tuttavia riesce a trovare quelle
+corrette senza ipotesi a posteriori, e senza assunzioni non
+giustificabili direttamente (si poteva infatti porre $c = $ cost
+all'inizio del lavoro dacch\'e, dovendo essere le leggi della fisica
+uguali in tutti i sistemi di riferimento, essa \`e una costante per le
+leggi dell'elettromagnetismo, uguale in tutti i sistemi); diversamente
+per \poin: egli aveva posto $K = c^2$ solamente una volta trovate le
+trasformazioni, e solamente perch\'e cos\`i le cose funzionavano: il
+fallimento dell'esperimento di Michelson e Morley era spiegato, e le
+leggi dell'elettromagnetismo erano le stesse per tutti i sistemi di
+riferimento inerziali.

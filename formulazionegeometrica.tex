@@ -1,0 +1,824 @@
+%#!simpdftex latex relativita.tex
+\chapter{Formulazione geometrica}
+\minitoc La formulazione geometrica della relativit\`a, presentata per
+la prima volta da Minkowski, permette di trattare la relativit\`a
+ristretta in maniera matematica, e dunque precisa. Questo pu\`o essere
+piacevole, o causare sofferenza, a seconda delle inclinazioni
+individuali\footnote{Qualche studente di fisica potrebbe rimembrare che
+tali furono le parole usate dal professor Francesco Fass\`o
+nell'introdurre il suo corso di Istituzioni di Fisica Matematica.}.
+\section{Gruppi}
+Per procedere con la nostra trattazione dobbiamo innanzi tutto
+dare la definizione di gruppo, forse gi\`a nota al lettore dal corso
+di metodi.
+
+\setcounter{teorema}{-1}
+
+\begin{definizione}
+Un gruppo $\mt{G}$ rispetto all'operazione binaria $\varepsilon$ \`e un
+insieme che gode delle propriet\`a seguenti:
+\begin{enumerate}
+\item combinando due elementi di $\mt{G}$ tramite $\varepsilon$, ottengo
+      un elemento che appartiene ancora a $\mt{G}$;
+\item presi tre elementi qualsiasi di $\mt{G}$, siano essi $g,h$ e $k$,
+      si ha che vale la seguente uguaglianza:
+\begin{equation}
+ g\varepsilon(h\varepsilon k) = (g \varepsilon h) \varepsilon k;
+\end{equation}
+\item esiste un elemento $e$, appartenente a $\mt{G}$, detto
+      \enf{elemento neutro}, tale che, $\forall\,g\in\mt{G}$
+\begin{equation}
+ e \varepsilon g = g \varepsilon e = g
+\end{equation}
+
+\item $\forall\,g\in\mt{G}$ esiste l'\enf{elemento simmetrico}
+      $\tilde{g}$ tale che
+      \begin{equation}
+      g \varepsilon \tilde{g} = \tilde{g} \varepsilon g = e
+      \end{equation}
+\end{enumerate}
+\end{definizione}
+\subsection{Notazioni}
+Siamo gi\`a entrati in contatto con la notazione con indici, e,
+assieme ad essa, con $x^{\mu},g_{\mu\nu}$ e $\la^{\mu}{}_{\nu}$.
+Ora definiamo il modo con cui indichiamo trasposta e inversa di $\la$
+e inversa di $g_{\mu\nu}$, e nella notazione con indici, e nella
+notazione matriciale, che potr\`a, talvolta, tornarci utile.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{ccl}
+Notazione con indici &$\longrightarrow$& Notazione Matriciale \\
+$x^{\mu}$ &$\longrightarrow$& x \\
+$\Lambda^{\mu}{}_{\nu}$ &$\longrightarrow$& $\Lambda $\\
+$\Lambda_{\mu}{}^{\nu}$ &$\longrightarrow$& $\widetilde{\Lambda}$\\
+$\widehat{\la}^{\nu}{}_{\mu}$ &$\longrightarrow$& $\la^{-1}$\\
+$g_{\mu \nu}$ &$\longrightarrow$& $G$\\
+$g^{\mu\nu}$ &$\longrightarrow$& $G^{-1}$
+\end{tabular}
+\end{center}
+\label{tab:notazioni}\caption{Notazioni.}
+\end{table}
+
+Introduciamo anche la \textbf{convenzione di Einstein}\index{convenzione
+di Einstein}, per la quale se in una formula vi sono due indici uguali,
+uno in alto ed uno in basso, si intendono sommati; per intenderci: 
+\begin{equation}
+g_{\mu\nu}dx^{\mu}=\sum_{\mu=0}^{3}g_{\mu\nu}dx^{\mu}
+\end{equation}
+\begin{equation}
+ \left(\mbox{ma \,\,} g_{\mu \nu} \de x^{\rho} + g_{\rho \mu} \de
+x^{\nu} \neq \sum _{\mu \nu \rho} \left( g_{\mu \nu} \de x^{\rho} +
+g_{\rho \mu} \de x^{\nu} \right)\right)
+\end{equation} 
+D'ora in poi si ha, inoltre, che le lettere greche varieranno da $0$ a
+$3$, quelle latine da $1$ a $3$; cos\`i
+\begin{equation}
+ g_{\mu \nu} x^{\mu} = \sum_{\mu = 0 }^{ 3 } g_{\mu \nu}
+x^{\mu} 
+\end{equation} 
+\begin{equation}
+g_{i \nu} x^{i} = \sum_{i = 1 }^{ 3 } g_{i \nu} x^{i}.
+\end{equation}
+Introdotte queste notazioni, risulter\`a ovvio scrivere $\de s^2$ come
+\begin{equation}
+\de x^{\mu}g_{\mu\nu}\de x^{\nu};
+\label{eq:interv_contr}
+\end{equation}
+nella nostra trattazione ci torneranno inoltre comode le siddette
+coordinate covarianti, definite nel seguente modo:
+\begin{equation}
+x_{\mu} = g_{\mu\nu} x^{\nu},
+\label{eq:def_covar}
+\end{equation}
+ovvero 
+\begin{equation}
+x_0 = x^0 
+\end{equation}
+\begin{equation}
+x_i = - x^i.  
+\end{equation}
+Volendo scrivere la (\ref{eq:interv_contr}) tenendo conto di queste
+nuove coordinate, otteniamo 
+$$ \de s^2 = \de x_{\nu} \de x^{\nu}; $$
+come gi\`a visto in tabella \vref{tab:notazioni}, avremo a che fare
+anche con $g^{\mu\nu}$, definito come l'inverso di $g_{\mu\nu}$, e tale
+che $g_{\mu \sigma} g^{\mu \rho} = \delta_{\sigma}{}^{\rho}$ (delta di
+Kroenecker).
+
+La nostra definizione sembrerebbe a prima vista del tutto inutile, in
+quanto $g_{\mu \nu} = g^{\mu \nu}$; tuttavia ci\`o non \`e in generale
+vero (lo \`e solo per lo spazio tempo piatto in coordinate cartesiane),
+dunque la nostra definizione non \`e ridondante.  \newline Moltiplicando
+per $g^{\mu \rho}$ ambo i membri della (\ref{eq:def_covar}) otteniamo:
+\begin{equation}
+ g^{\mu \rho} x_{\mu} = g_{\mu \nu} g^{\mu \rho} x^{\nu} = 
+\delta_{\nu}{}^{\rho} x^{\nu}, 
+\end{equation}
+\begin{equation}
+ x^{\rho} = g^{\mu \rho} x_{\mu}
+\end{equation} 
+da cui 
+\begin{equation}
+\de s^2 = g^{\mu
+\nu}\de x_{\mu} \de x_{\nu}.
+\end{equation}
+\subsection{Condizione di invarianza}
+Andiamo ora ad analizzare \textbf{la condizione di invarianza
+dell'intervallo spazio temporale}. Si sa che:
+\begin{equation}
+ \de x^{\mu}g_{\mu\nu}\de x^{\nu}={\de x'}{}^{\mu}g_{\mu\nu}{\de x'}{}^{\nu};
+\end{equation}
+scrivendo il tutto in forma matriciale:
+\begin{equation}
+\widetilde{\de x}\;G\;\de x=\widetilde{\de x'}\;G\;\de x'
+\label{eq:invariantematrice}
+\end{equation}
+Le trasformazioni che lasciano invariato l'intervallo avevano la
+forma:
+\begin{equation}\begin{array}{rcl}
+{x'}{}^{\mu}      & = &\Lambda^{\mu}{}_{\nu}\;x^{\nu}+a^{\mu}; \\
+                  & \mbox{dif\mbox{}ferenziando}& \\
+{\de x'}{}^{\mu}  & = & \Lambda^{\mu}{}_{\nu}\,\de x^{\nu}. \\ 
+                  & \mbox{In forma matriciale} & \\
+\de x'            & = &\Lambda\, \de x; \\
+                  & \mbox{trasponendo:} &\\
+\widetilde{\de x'}& = &\widetilde{\de x}\widetilde{\Lambda}
+\end{array}
+\end{equation}
+Allora la (\ref{eq:invariantematrice}) pu\`o riscriversi:
+\begin{equation}
+\widetilde{\de x} \; G \; \de x=\widetilde{\de x'} \; 
+(\widetilde{\Lambda} \; G \; \Lambda) \; \de x'
+\end{equation}
+da cui si ricava $G=\tilde{\la}\;G\;\la$, o, con l'altra notazione
+\begin{equation}
+ g_{\mu \nu} = \la_{\mu}{}^{\rho} g_{\rho \sigma} \la^{\sigma}{}_{\nu}.
+\end{equation}
+\subsection{Gruppi di Poincar\'e e Lorentz}
+Ricapitoliamo: le trasformazioni che lasciano l'intervallo
+spazio-temporale invariato sono della forma, come gi\`a dimostrato:
+
+%\marginpar{\footnotesize \vspace{0.1cm} Cogli
+%indici:}\marginpar{\footnotesize
+%${x'}^{\mu}=\Lambda^{\mu}{}_{\nu}\;x^{\nu}+a^{\nu}$}
+\begin{equation}
+x'=\Lambda x+a\quad\mbox{($a\in\mathbb{R}^4;\;\Lambda$ matrice
+$4\times4$ a valori reali)}
+\end{equation}
+con $\Lambda$ tale che 
+%\marginpar{\footnotesize$\Lambda_{\mu}{}^{\rho}
+%\; g_{\rho\sigma} \Lambda^{\sigma}_{\nu}=g_{\mu\nu}$}
+$\widetilde{\Lambda}\;G\;\Lambda=G$, affinch\'e l'intervallo sia
+inviariante. 
+%\marginpar{\vspace{0.5cm} \footnotesize si ricorda
+%che}\marginpar{\footnotesize$\Lambda_{\mu}{}^{\rho} \;
+%g_{\rho\sigma}\Lambda^{\sigma}{}_{\nu}=$} \marginpar{ \footnotesize
+%$\sum^3_{\rho=0}\sum^3_{\sigma=0}\Lambda_{\mu}{}^{\rho} \;
+%g_{\rho\sigma}\Lambda^{\sigma}{}{}_{\nu}=$}
+%\marginpar{\footnotesize$g_{\nu\mu}\Rightarrow$ 16 equazioni} 
+Queste leggi per le trasformazioni costituiscono un gruppo che ha come elementi
+$\left\{\Lambda,a\right\}$. Le leggi di composizione sono:
+\begin{equation}
+\left\{\Lambda_{1},a_{1}\right\}\cdot\left\{\Lambda_{2},a_{2}\right\}=
+\left\{\Lambda_{1}\Lambda_{2},\Lambda_{1}a_{2}+a_{1}\right\}
+\label{eq:grppoinc}
+\end{equation}
+Infatti si ha $x'=\Lambda_{2}x+a_{2}$ e $x''=\Lambda_{1}x'+a_{1}$,
+e dunque:
+\begin{eqnarray*}
+x''&=&\stackrel{x''\mbox{ in funzione di }
+x}{\overbrace{\Lambda_{1}\Lambda_{2}x+\Lambda_{1}a_{2}+a_{1}}}\\
+&=&(\Lambda_{1}\Lambda_{2})x+(\Lambda_{1}a_{1} + a_{2})
+\end{eqnarray*}
+Componendo la trasformazione $\Lambda_{1}$ con $\Lambda_{2}$
+ottengo quindi la~(\ref{eq:grppoinc}).
+Deve poi valere
+$\widetilde{\Lambda_{1}\Lambda_{2}}\;G\;\Lambda_{1}\Lambda_{2}=G$.
+Ma si constata subito che quanto appena scritto \`e uguale a:
+\begin{equation}
+ \widetilde{\Lambda_{2}} \widetilde{\Lambda_{1}} \; G \; 
+ \Lambda_{1}\Lambda_{2}=\widetilde{\Lambda_{2}}\;G\;\Lambda_{2}=G
+\end{equation}
+Dunque, effettivamente la~(\ref{eq:grppoinc}) \`e una legge di
+composizione. Si dimostra che \`e associativa e che l'elemento
+neutro \`e:
+\begin{equation}
+ e=\{\rem{Id},0\}
+\end{equation}
+ e l'inverso \`e
+\begin{equation}
+\{\Lambda^{-1},-\Lambda^{-1}a\}
+\end{equation}
+\`e banale verificarlo usando la~(\ref{eq:grppoinc}). Il gruppo cos\`i
+ottenuto con elementi \index{gruppo!di Poincar\'e} $\{\la,a\}$ \`e detto
+\textbf{Gruppo di Poincar\'e $\mathscr{P}$.}  
+\newline 
+Il gruppo che si \index{gruppo!di Lorentz} ottiene ponendo
+$a=0$ \`e detto \textbf{Gruppo di Lorentz} $\mathscr{L}$ e 
+si osserva immediatamente che $\mt{L}$ ha quattro componenti
+connesse; infatti una prima suddivisione \`e
+\begin{eqnarray*}
+\det G &=& -1 = \det (\widetilde{\la}\;G\;\la) 
+\stackrel{\tiny\mbox{ Teorema  di Binet}}{=}
+\det(\widetilde{\la})\;\det(G)\;\det(\la) \stackrel{\tiny \det
+G=-1}{=}-(\det \la)^2\\ &&
+\Longrightarrow
+\det\la=\left\{
+	 \begin{array}{ll} 
+	  +1 \rightarrow \mt{L}_{+}\\
+	 -1 \rightarrow \mt{L}_{-}
+	 \end{array}
+	\right.
+\end{eqnarray*}
+Per poter passare per\`o da $\det \la=1$ a $\det\la=-1$, si deve
+fare un salto discontinuo, bench\'e, come detto prima, si abbia
+che ogni singola componente sia connessa. Si ha poi:
+\begin{eqnarray*}
+1 = g_{00} & = & \la_{0}{}^{\mu} \; g_{\mu\nu}\la^{\nu}{}_{0} \quad 
+\mbox{\footnotesize(ricordiamo che
+$g_{00}\la^{0}{}_{0}=\la_{0}{}^{0}$)}\\
+%
+ & = & \stackrel{(\la_{0}{}^{0})^2}{\overbrace{\la_{0}{}^{0}\la_{0}{}^{0}}}
+- \sum_{i=1}^{3}\la_{0}{}^{i}\la_{i}{}^{0}\\
+\Longrightarrow (\la_{0}{}^{0})^2  & = &  1 +
+\sum_{i=1}^{3}\la_{0}{}^{i}\la_{i}{}^{0}\geq1
+\end{eqnarray*}
+Ne segue
+\begin{equation}
+\la_{0}{}^{0} = \left\{
+		 \begin{array}{ll} 
+		  \geq +1 \rightarrow \la \in \mt{L}^{\uparrow}\\
+		  \leq -1 \rightarrow \la \in \mt{L}^{\downarrow}
+		 \end{array}
+		\right.
+\end{equation}
+Si definisce allora il \textbf{Gruppo di Lorentz proprio}
+\index{gruppo!di Lorentz proprio}come $\mt{L}^{\uparrow}_{+}$, cio\`e
+tutte le $\la$ t.c.
+\begin{eqnarray*}
+\widetilde{\la}\;G\;\la&=&G\\
+\det \la&=&1\\
+\la_{0}{}^{0}&\geq&1
+\end{eqnarray*}
+e il \textbf{Gruppo di Poincar\'e proprio}, \index{gruppo!di Poincar\'e
+proprio}ossia $\forall\;a \in \mathbb{R}^4$: 
+\begin{equation}
+ \mbox{se }\la\in\mt{L}^{\uparrow}_{+}
+ \Longrightarrow \{\la,a\}\in\mt{P}^{\uparrow}_{+}
+\end{equation}
+\subsection{Particolarit\`a del gruppo di Lorentz proprio.}
+ \index{gruppo!di Lorentz proprio} 
+Ci domandiamo ora che forma hanno le
+$\la \in \mt{L}^{\uparrow}_{+}$. Esse sono matrici $4\times4$, per\`o,
+dacch\'e $G$ \`e simmetrica, le equazioni $\widetilde{\la}\;G\;\la$ sono
+solo
+\begin{equation}
+\frac{1}{2}(\# \mbox{ fuori diagonale}) + (\#\mbox{
+ diagonale})=\frac{1}{2}\;12+4=10: 
+\end{equation}
+10 equazioni indipendenti, il che implica $16-10 = 6$
+parametri indipendenti.\footnote{Le dieci equazioni rappresentano dieci
+vincoli al sistema}
+
+Se abbiamo trasformazioni che agiscono solo su $x^1$, $x^2$, $x^3$ e
+lasciano invariante l'intervallo spazio-temporale allora devono lasciare
+invariato l'intervallo spaziale: le trasformazioni che danno questo
+risultato sono le rotazioni: ci ritroviamo dunque con solo tre parametri
+(infatti le rotazioni ne hanno ``presi'' altri tre). Riscriviamo le
+trasformazioni di Lorentz speciali lungo $x^1$ ($\gamma$ e $\beta$
+definite come sopra):
+\begin{eqnarray*}
+x'^1&=&(x^1-\beta\;x^0)\;\gamma\\
+x'^2&=&x^2\\
+x'^3&=&x^3\\
+x'^0&=&(x^0-\beta\;x^1)\gamma. \end{eqnarray*}
+
+Dunque: lungo il primo asse mi ritrovo un parametro, ma per
+l'isotropia dello spazio, nulla mi vieta di poter fare le medesime
+trasformazioni anche per gli altri due assi, ritrovandomi cos\`i
+ad avere gli altri due parametri che mi servivano. In questo modo
+posso caratterizzare il gruppo proprio di Lorentz, in quanto si \`e
+trovato che \`e fatto da \emph{trasformazioni di Lorentz
+lungo $x^1,\;x^2,\;x^3$, e da rotazioni \index{rotazioni}attorno i tre assi.}
+
+La matrice che corrisponde alle trasformazioni speciali di Lorentz
+lungo $x^1$ con velocit\`a $v$ \`e ($\la\in
+\mt{L}_{+}^{\uparrow}$):
+\begin{equation}
+\la=\left(\begin{array}{cccc}
+\gamma&-\beta\gamma&0&0\\-\beta\gamma&\gamma&0&0\\0&0&1&0\\0&0&0&1\\\end{array}\right)
+\end{equation}
+$$
+\Rightarrow\det\la=1.
+$$
+
+Abbiamo perci\`o visto che i gruppi $\mt{P}$ e $\mt{L}$ si spezzano nei
+sottogruppi (evito di riportare quelli di~$\mt{P}$):
+$$
+\mt{L}_{+}^{\uparrow} \quad \mt{L}_{-}^{\uparrow} \quad
+\mt{L}_{+}^{\downarrow}\quad \mt{L}_{-}^{\downarrow}
+$$
+Possiamo introdurre ora degli operatori su questi gruppi:
+\begin{dinglist}{172}
+\item  Operatore di Parit\`a: $\mathit{P}\mathbf{x}=-\mathbf{x}$
+$$
+\mathit{P}=\left(\begin{array}{rrrr}
+1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1\\\end{array}\right)
+$$
+\begin{center}
+$\mathit{P}^0{}_0=1\Longrightarrow\mi{P}\in\mt{L}^{\uparrow}$\newline
+$\det \mi{P}=-1\Longrightarrow\mi{P}\in\mt{L}^{\uparrow}_{-}$
+\end{center}
+\end{dinglist}
+\begin{dinglist}{173}
+\item Analogamente, considerando l'inversione temporale $\mi{T}$
+$$
+\mathit{T}=\left(\begin{array}{rrrr}
+-1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1\\
+\end{array}\right)
+$$
+\begin{center}
+$\mathit{T}^0{}_0=-1\Longrightarrow\mi{T}\in\mt{L}^{\downarrow}$
+\newline
+$\det \mi{T}=-1\Longrightarrow\mi{T}\in\mt{L}^{\downarrow}_{-}$
+\end{center}
+\end{dinglist}
+\begin{dinglist}{174}
+\item Inoltre si pu\`o prendere $\mi{P}\mi{T}$
+$$
+\mathit{PT}=\left(\begin{array}{rrrr}
+-1&0&0&0\\0&-1&0&0\\0&0&-1&0\\0&0&0&-1\\
+\end{array}\right)
+$$
+\begin{center}
+$\mi{P}\mi{T}\in\mt{L}^{\downarrow}_{+}$
+\end{center}
+\end{dinglist}
+\begin{osservazione}
+Per ora non abbiamo utilizzato il principio di relativit\`a di Einstein,
+il quale afferma che le leggi della fisica hanno la stessa forma in
+tutti i sistemi di riferimento inerziali. Allora se sono in $ S' $ e
+applico, ad esempio, l'operatore di parit\`a, mi ritrovo in un sistema
+di riferimento $S$ nel quale devono valere le stesse leggi della fisica
+del primo.  Invece nel '57 si scoperse che nel decadimento $\beta$
+questo principio era violato in quanto l'operatore parit\`a non lascia
+inviarianti le leggi della fisica. Si trova invece che le leggi della
+fisica sono invarianti per $\mt{P}_{+}^{\uparrow}$, e quindi per
+$\mt{L}_{+}^{\uparrow}$.
+\end{osservazione}
+\begin{osservazione}[dovuta a Minkowski] La distanza euclidea
+infinitesima in $\mathbb{R}^3$ \`e\footnote{
+da qui l'invarianza per rotazioni}:
+\begin{equation}
+ |d\mathbf{x}|^2=(dx^1)^2+(dx^2)^2+(dx^3)^2.
+\end{equation}
+L'intervallo spazio temporale ha invece la forma:
+\begin{equation}
+ ds^2=(dx^0)^2-|d\mathbf{x}|^2
+\end{equation}
+Se definisco\footnote{Si chiama rotazione di Wick quando la si applica
+alla teoria dei campi} $x^4=ix^0$
+\begin{equation}
+ \Rightarrow ds^2=-[(dx^4)^2+(dx^1)^2+(dx^2)^2+(dx^3)^2]
+\end{equation}
+In questa maniera si trova un modo per trasformare nozioni
+euclidee nello spazio tempo reale. Infatti l'invarianza di
+$ds^2\;\;(x^1,x^2,x^3,x^4)$ \`e quella delle rotazioni
+4-dimensionali (oppurtunamente complessificate); prendiamo la
+rotazione di $x^4$ e $x^1$. Si ha:
+\begin{eqnarray*}
+\stackrel{\mathrm{Imm}}{\overbrace{x'^4}} & =
+ &\cos\xi\;\stackrel{\mathrm{Imm}}{\overbrace{x^4}} 
++ \sin\xi\;\stackrel{\mathrm{Reale}}{\overbrace{x^1}}\\
+x'^1&=&-\sin\xi\; x^4 + \cos \xi\; x^1\
+\label{eq:sincos}
+\end{eqnarray*}
+Se $\xi\in\mathbb{C}$ $\sin\xi\in i\mathbb{R}$ e $\cos\xi\in\mathbb{R}$,
+(altrimenti le uguaglianze non varrebbero). Perci\`o
+$\xi=i\psi,\;\psi\in\mathbb{R}$, e in tal modo si ottiene
+\begin{eqnarray*}
+\cos\xi=\cos(i\psi)&=&\cosh\psi\\
+\sin\xi=\sin(i\psi)&=& - i \sinh\psi
+\label{eq:sinhcosh}
+\end{eqnarray*}
+Allora:
+\begin{equation}
+\left\{\begin{array}{l}
+(x^1)'=\sinh\psi\;x^0 + \cosh\psi\;x^1\\
+(x^0)'=\cosh\psi\;x^0 - \sinh\psi\;x^1
+\end{array}\right.
+\label{eq:iper}
+\end{equation}
+(la seconda non \`e altro che
+$(x^4)'=i(x^0)'=\cosh\psi\;ix^0+\sinh\psi\;ix^1 \mbox{, divisa per } i$).  
+Consideriamo ora un sistema $S'$ che si muove con velocit\`a $v$
+rispetto ad $S$, con $x^1$ costantemente uguale a 0; si avr\`a: 
+\begin{equation}
+ (x^1)'=-vt'=-\frac{v}{c}(x^0)'\Rightarrow\frac{(x^1)'}{(x^0)'}=-\frac{v}{c}
+\qquad(\ddagger) 
+\end{equation}
+Dalle (\ref{eq:iper}) risulta: 
+\begin{equation}
+ \frac{(x^1)'}{(x^0)'}=\tanh\psi\stackrel{(\ddagger)}{=}-\frac{v}{c}
+\end{equation}
+\begin{equation}
+\Longrightarrow\left\{\begin{array}{l}
+\sinh\psi=-\beta\;\gamma\\
+\cosh\psi=\gamma
+\end{array}\right.
+\label{eq:tanh}
+\end{equation}
+\begin{equation}
+ (\mbox{discende da } \cosh^2t-1=\sinh^2t)
+\end{equation}
+Riscrivendo la~(\ref{eq:sincos}) tenendo conto di~(\ref{eq:sinhcosh}) 
+e~(\ref{eq:tanh}) ritroviamo la matrice di Lorentz, il che implica
+che in relativit\`a, v'\`e l'invarianza per rotazioni complesse.
+\end{osservazione}
+\section{Calcolo vettoriale}
+\subsection{Calcolo vettoriale in meccanica prerelati\-vi\-sti\-ca}
+%Nel cominciare questa sezione, facciamo subito notare le
+%differenze geometriche tra meccanica pre-relativistica e
+%relativistica riportate in tabella \vref{tab:diff}.
+%
+%\begin{table}[!h]
+%\begin{center}
+%\begin{tabular}{ccc}
+%Meccanica Pre-relativistica &$\longrightarrow$& Meccanica Relativistica \\
+%Spazio 3-D &$\longrightarrow$& Spazio-tempo 4-D\\
+%Invarianza per rotazioni &$\longrightarrow$& Invarianza per
+%$\mt{L}^{\uparrow}_{+}$\\
+%Metrica $\sum_{\alpha}(dx^{\alpha})^2$ &$\longrightarrow$&
+%$ds^2=(dx^0)^2-(d\mathbf{x})^2$
+%\end{tabular} \caption{}\label{tab:diff}
+%\end{center}
+%\end{table}
+In meccanica pre-relativistica si usa il calcolo
+vettorialea\index{calcolo vettoriale!euclideo} poich\'e, grazie ad esso,
+le leggi della fisica sono covarianti per rotazioni o traslazioni, come
+conseguenza dell'omogeneit\`a e dell'isotropia dello spazio. La legge di
+trasformazione in questo caso \`e (se $x_i=(x_1,x_2,x_3)$):
+\begin{equation}
+ x_i'=\sum_{j=1}^3(R_{ij}x_{j}+a_j)\qquad \mbox{con} R { tale che }
+\tilde{R}\cdot R=\mbox{Id}
+\end{equation}
+Gli oggetti tipici del calcolo vettoriale sono\footnote{L'apice $'$
+indica l'oggetto in questione dopo la trasformazione}
+\begin{itemize} 
+ \item gli scalari: $A$ \`e uno scalare quando (rispetto alle
+roto-traslazioni):
+\begin{equation}
+ A'=A
+\end{equation}
+ \item i vettori: $V$ \`e un vettore quando:
+\begin{equation}
+ V_{i}'=R_{ij}V_{j}
+\end{equation}
+\end{itemize}
+Presa un'equazione $\mathbf{F}=m\mathbf{a}$ (in componenti $F_i=ma_i$),
+nel nuovo sistema di riferimento $S'$ si ha:
+\begin{equation}
+ F_{j}'=R_{ij}F_i=R_{ij}ma_i=ma_{i}' \mbox{ con } R_{ij} a_i = a'_j:
+\end{equation}
+questo significa che nel nuovo sistema di riferimento, le leggi
+sono le stesse.
+\section{E in fisica relativistica\ldots? I tensori.}
+\index{calcolo vettoriale!quadridimensionale} Tuttavia, in fisica
+relativistica per compiere queste trasformazioni abbiamo bisogno di uno
+spazio quadri-dimensionale, e non delle rotazioni, bens\`i delle
+trasformazioni di Lorentz.  Si introduce dunque la nozione di tensore
+quadridimensionale. Un \index{tensore}tensore $I_{ij}$ (in questo caso
+si pu\`o pensare al momento d'inerzia) \`e un oggetto che trasforma come
+il prodotto tra due vettori. Ovvero, se $I_{ij}\sim v_i v_j$,
+$v\in\mathbb{R}^3$, si ha:
+\begin{equation}
+I=\left(\begin{array}{ccc} v_1v_1 & v_1v_2 & v_1v_3\\
+v_2v_1 & v_2v_2 & v_2v_3\\
+v_3v_1 & v_3v_2 & v_3v_3 \end{array}\right)
+\label{eq:primotensore}
+\end{equation}
+Dacch\'e $I_{ij}\sim v_i v_j$, per rotazioni vive la seguente
+relazione:
+\begin{eqnarray*}
+I_{ij}'&=&\sum_{l=1}^3 R_{il}v_l\sum_{k=1}^3R_{ik}v_k\\
+&=&\sum_{l,k=1}^{3}R_{il}R_{jk}(v_{l}v_{k})
+\end{eqnarray*}
+$I_{ij}$ \`e a due indici, ma si possono introdurre quanti indici
+si vogliono. Inoltre si pu\`o avere anche $I_{ij}\sim v_i u_j$, e
+la (\ref{eq:primotensore}) cambier\`a di conseguenza; risulta
+sempre chiaro che si possono avere tutti gli indici che si
+vogliono, per esempio\footnote{$A$ \`e in questo caso un
+tensore di rango 4, mentre $I$ era un tensore di rango 2}
+$A_{ijkl}\sim v_i v_j v_k v_l$ (e di conseguenza
+$A_{ijkl}'=\sum_{m,n,o,p=1}^{3}R_{im}R_{jn}R_{ko}R_{lp}A_{mnop}$).
+Si ha che:
+\begin{itemize}
+\item $A_{ijkl}$ \`e un tensore di rango 4;
+\item uno scalare \`e un tensore di rango 0;
+\item un vettore \`e un tensore di rango 1.
+\end{itemize}
+\begin{esempio}[Tensore $\varepsilon$]
+$$
+\varepsilon_{ijk}=\left\{\begin{array}{l} \;\;\;1 \mbox{ se }
+\left(\begin{array}{c}
+i\\j\\k\\\end{array}\right)=\left(\begin{array}{c}
+1\\2\\3\end{array}\right) \mbox{ o permutazioni pari}\\
+\mbox{ }\\
+-1 \mbox{ se } \left(\begin{array}{c} i\\j\\k\\\end{array}\right)
+\mbox{ \`e una permutazione dispari di } \left(\begin{array}{c}
+1\\2\\3\end{array}\right)\\
+\mbox{}\\
+0 \mbox{ altrimenti}
+\end{array} \right.
+$$
+\end{esempio}
+\begin{esempio}[Il simbolo di Kroenecker]\index{delta!di Kroenecker}
+$\delta_{ij}$, non \`e altro che un tensore di rango~2.
+\end{esempio}
+\section{Il calcolo tensoriale\ldots}
+Come prima accennato, in relativit\`a si usano i tensori; descriviamo
+gli oggetti con cui entreremo in contatto(prendiamo, d'ora in poi, $\la
+\in \mt{P}^{\uparrow}_{+}$):\footnote{Potr\`a a qualcuno apparire strano
+di come vengano definiti questi oggetti; infatti non si asserisce nulla
+di concreto su di essi, se non come essi trasformano sotto $la \in
+\mt{P}^{\uparrow}_{+}$; tuttavia tale metodo, essendo il pi\`u astratto
+possibile, ha dei vantaggi, dacch\'e permette di ``catalogare'' subito
+gli oggetti con cui si viene a contatto; pi\`u avanti (sicuramente nel
+capitolo dedicato all'elettromagnetismo), si familiarizzer\`a con questo
+concetto in maniera pi\`u ``operativa''.}
+\begin{itemize}
+\item un quadriscalare $A$ \`e un oggetto che per trasformazioni
+$\mt{P}^{\uparrow}_{+}$ si comporta in maniera tale da aversi:
+$$A'=A;$$
+\item un quadrivettore controvariante\footnote{Per capirsi
+una volta per tutte, controvarianti sono gli oggetti con l'indice,
+o gli indici, in alto, covarianti gli oggetti con indice in
+basso, bench\'e la definizione precisa \`e data in base al modo in cui 
+trasformano} $A^{\mu},\;\mu=1,2,3,4$, \`e tale che:
+$$
+A'^{\mu}=\la^{\mu}{}_{\nu}A^{\nu};
+$$
+\item un quadri-tensore covariante di rango 2, $A_{\mu\nu}$ \`e
+tale che
+$$A'_{\mu\nu}=\la^{\mu}{}_{\rho}\la^{\nu}{}_{\sigma}A_{\rho\sigma}.$$
+\begin{esempio}
+Il tensore metrico $g_{\mu\nu}$.
+\end{esempio}
+\begin{esempio}
+In 3D possiamo prendere $\delta_{ij}$:
+$$
+\delta_{ij}=\left(\begin{array}{ccc} 1&0&0\\0&1&0\\0&0&1
+\end{array}\right)
+$$
+\end{esempio}
+\item un vettore covariante $A_{\mu}$ \`e tale che
+$A_{\mu}=g_{\mu\nu}A^{\nu}$ ($A^0=A_0$ e $A^i=-A_i$). Tale oggetto
+trasforma cos\`i:\footnote{$\widehat{\la}$ \`e l'inversa}
+\begin{eqnarray*}
+A'_{\mu}&=&\widehat{\la}^{\nu}{}_{\mu}A_{\nu} \quad \mbox{dove}\\
+\widehat{\la}^{\nu}{}_{\mu}&=&g_{\mu\rho}\la^{\rho}{}_{\sigma}g^{\sigma\nu}
+\end{eqnarray*}
+Prendiamo $A'^{\nu}=\la^{\nu}{}_{\rho}A^{\rho}$. Si ha:
+\begin{equation}
+  A'_{\mu}=g_{\mu\nu}A'^{\nu} = g_{\mu\nu}\la^{\nu}{}_{\rho} 
+  A^{\rho}\stackrel{\star}{=}
+\end{equation}
+Dacch\'e $A^{\rho}=g^{\rho\sigma}A_{\sigma}\Longrightarrow$
+\begin{equation}
+ \stackrel{\star}{=}\stackrel{\widehat{\la}_{\mu}{}^{\sigma}}
+{\overbrace{g_{\mu\nu}\la^{\nu}{}_{\rho}g^{\rho\sigma}}}A_{\sigma}
+\end{equation}
+\item un quadri-tensore covariante di rango 2 \`e un oggetto $A_{\mu\nu}$
+tale che:
+\begin{equation}
+  A_{\mu\nu}'=\widehat{\la}_{\mu}{}^{\rho}\widehat{\la}_{\nu}{}^{\sigma} 
+  A_{\rho\sigma}
+\end{equation}
+\item un quadritensore di rango 1 covariante e di rango 1
+controvariante \`e un oggetto $A_{\mu}{}^{\nu}$ che trasforma in
+questo modo:
+\begin{equation}
+  A'_{\mu}{}^{\nu}=\widehat{\la}_{\mu}{}^{\sigma}\la^{\nu}{}_{\rho}
+  A_{\sigma}{}^{\rho}
+\end{equation}
+\item uno pseudo-tensore \index{pseudo-tensori}\`e di prima specie se dato
+$\la\in\mt{L}$, viene associato nella trasformazione il fattore
+$\det\la$
+\item uno pseudo-tensore \`e di seconda specie se, dato
+$\la\in\mt{L}$, viene associato nella trasformazione il fattore
+sgn$(\la^0{}_0)$
+\item uno pseudo quadri-vettore covariante di prima specie \`e tale che, se
+$\la\in\mt{L}$:
+\begin{equation}
+ A'_{\mu}=(\det\la)\widehat{\la}_{\mu}{}^{\nu}A_{\nu}
+\end{equation}
+\item uno pseudo quadri-vettore controvariante di seconda specie \`e tale che:
+$$
+A'^{\mu}=\mbox{sgn}\la^0{}_{0}\la^{\mu}{}_{\nu}A^{\nu}
+$$
+\end{itemize}
+\begin{definizione}
+Definiamo poi $\varepsilon_{\mu\nu\rho\sigma}$, uno pseudo-tensore di
+rango 4, detto pseudo-tensore di Levi-Civita \index{Levi-Civita!simbolo
+di}, tale che: 
+\begin{equation}
+ \varepsilon_{\mu\nu\rho\sigma} 
+  = \left\{
+     \begin{array}{l}
+      1 \mbox{ se } \left(
+		     \begin{array}{c}
+		     \mu\\\nu\\\rho\\\sigma
+		     \end{array}
+		    \right)=
+      \left(
+       \begin{array}{c}
+       1\\2\\3\\4
+       \end{array}
+      \right) 
+      \mbox{ o permutazioni pari}\\ 
+      \mbox{ }\\ 
+      -1 \mbox{ se } 
+       \left(
+	\begin{array}{c}
+	\mu\\\nu\\\rho\\\sigma
+	\end{array}
+       \right) 
+       \mbox{ \`e una permutazione dispari di } 
+	     \left(
+	      \begin{array}{c} 
+	      1\\2\\3\\4
+	      \end{array}
+	     \right)\\
+      \mbox{}\\ 0 \mbox{ altrimenti}
+     \end{array} 
+    \right.
+\end{equation}
+Le leggi di trasformazione diventano:
+\begin{equation}
+ \varepsilon'^{\mu\nu\rho\sigma} = (\det \la) \la^{\mu}{}_{\alpha} 
+  \la^{\nu}{}_{\beta} 
+  \la^{\rho}{}_{\gamma} 
+  \la^{\sigma}{}_{\delta} 
+  \varepsilon^{\alpha\beta\gamma\delta}
+  \stackrel{\ddagger}{=}
+\end{equation}
+ma
+\begin{equation}
+ \varepsilon^{\alpha\beta\gamma\delta} 
+ \la^{\mu}{}_{\alpha} 
+ \la^{\nu}{}_{\beta} 
+ \la^{\rho}{}_{\gamma}
+ \la^{\sigma}{}_{\delta} = 
+ (\det\la)\varepsilon^{\mu\nu\rho\sigma}
+ \end{equation}
+e dunque:
+\begin{equation}
+ \stackrel{\ddagger}{=}
+  (\det\la)^2 
+  \varepsilon^{\mu\nu\rho\sigma}   \; \; 
+  \stackrel{\tiny(\det\la)^2=1}{=} \; \;
+  \varepsilon^{\mu\nu\rho\sigma}
+\end{equation}
+\end{definizione}
+\begin{osservazione}[Analogie e differenze tra la geometria relativistica, e la geometria non relativistica]
+Per una pi\`u veloce comprensione, usiamo questo utile schema
+riassuntivo:
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{ccc}
+Geometria non relativistica &$\longrightarrow$& Geometria relativistica\\
+$\mathbb{R}^3\Longrightarrow i=1,2,3$ & $\longrightarrow$ & 
+$\mathbb{R}^4\Longrightarrow\mu=1,2,3,4$\\
+$d\mathbf{x}$ invariante per rotazioni & $\longrightarrow$ & 
+$\de s$ invariante per $\mt{L}$ e $\mt{P}$\\
+$(d\mathbf{x})^2=\delta_{ij}dx^idx^j$ & $\longrightarrow$ & 
+$(ds)^2=g_{\mu\nu}dx^{\mu}dx^{\nu} \Longrightarrow 
+g_{0\mbox{}0}=-g_{i\mbox{}i}$\\
+$A_i=\delta_{ij}A^{j}=A^i$ & $\longrightarrow$ & $A_i\neq A^i$
+\end{tabular}
+\end{center}
+\end{table}
+\end{osservazione}
+\section{ Algebra tensoriale}
+\index{calcolo tensoriale}In questa sezione ci occuperemo di meglio
+definire le operazioni da compiere con gli oggetti introdotti sinora.
+\subsection{ Moltiplicazioni tra vettori}
+Prendiamo due vettori, $A^{\mu}$, controvariante, e $B_{\mu}$,
+covariante. Vale la seguente relazione:
+\begin{equation}
+ A'^{\mu} B'_{\mu} = \la^{\mu}{}_{\nu}A^{\nu} 
+  \widehat{\la}^{\sigma}{}_{\mu}B_{\sigma} = 
+  \stackrel{\delta_{\nu}{}^{\sigma}}{\overbrace{\la^{\mu}{}_{\nu}
+  \widehat{\la}^{\sigma}{}_{\mu}}} A^{\nu}B_{\mu}.
+\end{equation}
+Infatti, discende dalla definizione:
+\begin{equation}
+ \widehat{\la}^{\sigma}{}_{\mu}=g_{\mu\rho}\la^{\rho}{}_{\tau}g^{\tau\sigma};
+\end{equation}
+e perci\`o:
+\begin{equation}
+  \la^{\mu}{}_{\nu} \widehat{\la}^{\sigma}{}_{\mu} = \la^{\mu}{}_{\nu}
+   g_{\mu\rho} \la^{\rho}{}_{\tau}g^{\tau\sigma} =
+   (\widehat{\la}\,G\,\la)_{\nu\tau} g^{\tau\sigma} = g_{\nu\tau}
+   g^{\tau\sigma} = (G\,G^{-1})_{\nu}^{\sigma} = (1)_{\nu}^{\sigma} =
+   \delta_{\nu}^{\sigma}
+\end{equation}
+Si ha poi $A^{\mu} B_{\mu} = A^{\mu} g_{\mu\nu} B^{\nu} = A_{\nu}
+B^{\nu}$: allora \`e uno scalare (per le propriet\`a degli
+scalari). Ci\`o \`e del tutto analogo al prodotto scalare tra vettori
+($\mathbf{A}\cdot\mathbf{B}=\sum_{i}A_i
+B_i=\sum_{i,j}A_i\delta_{ij}B_j$).  Facciamo poi notare che
+$A^{\mu}B_{\mu}$ ha le propriet\`a del prodotto scalare,
+escluso\footnote{Dato uno spazio vettoriale
+$V,\,\mathbf{A},\,\mathbf{B}\in V$, il prodotto scalare tra i due
+vettori gode delle seguenti propriet\`a: \`e bilineare, definito
+positivo e simmetrico} il fatto che non \`e definito positivo.
+\subsection{ Contrazione degli indici}
+Il processo di indici sommati viene anche detto contrazione degli
+indici. Tramite tale processo si pu\`o abbassare di un grado il
+rango d'un tensore;
+Tramite il prodotto tra tensori, succede la stessa cosa; infatti,
+se $A_{\mu\nu\rho} B^{\sigma\tau}$ \`e un tensore 3~covariante e
+2~controvariante, si ha che, nel caso $\sigma=\rho$, otteniamo un
+tensore 2 covariante e 1 controvariante, pi\`u precisamente
+$A_{\mu\nu\rho} B^{\rho\tau}$; se invece si ha $A_{\mu} B^{\nu}$, e
+$\mu = \nu$, allora, per la convenzione di Einstein,
+$A_{\mu} B^{\mu} = A_0 B^0 + \ldots$, che \`e uno scalare, ovvero un
+tensore di rango 0, come si dovrebbe giustamente ottenere dalla
+contrazione di $A_{\mu}B^{\nu}$.
+\section{ Campi tensoriali, quadrigradiente e derivate}
+\begin{definizione}[Campo scalare]
+\index{campo!scalare}$\varphi(x)$ \`e un \emph{campo scalare} se, sotto una
+trasformazione $\{\la,a\}\in\mt{P}$, che manda $x$ in $x'=\la x +
+a$, vale la relazione:
+\begin{center}
+$\varphi'(x')=\varphi(x)$
+\end{center}
+\end{definizione}
+Ma come viene trasformato questo campo in funzione di $x'$? Si ha
+che $x=\la^{-1}(x'-a)$: un'altra maniera di dare la
+legge di trasformazione \`e dire:
+\begin{center}
+ $\varphi'(x')=\varphi(\la^{-1}(x'-a))$
+\end{center}
+Analogamente si ha:
+\begin{definizione}[Campo vettoriale]
+\index{campo!vettoriale}$A^{\mu}(x)$ \`e un campo vettoriale se, 
+sotto $\la\in\mt{L}$,
+vale la relazione:
+\begin{center}
+$A'^{\mu}(x')=\la^{\mu}{}_{\nu}A^{\nu}(x)$
+\end{center}
+\end{definizione}
+Prendiamo ora in considerazione la generalizzazione di
+$\mathbf{\nabla}$, ovvero il quadrigradiente.
+\index{quadrigradiente}
+\begin{definizione}[Quadrigradiente]
+L'operatore
+quadrigradiente \`e definito come:
+\begin{equation}
+ \partial_{\mu} \equiv \frac{\partial}{\partial x^{\mu}} = 
+  \left(
+   \frac{\partial}{\partial x^0}, 
+   \frac{\partial}{\partial x^i}
+  \right)
+  =\left(
+    \frac{1}{c}\frac{\partial}{\partial t},
+    \mathbf{\nabla}
+   \right)
+\end{equation}
+\end{definizione}
+Dunque il quadrigradiente di un campo scalare $\varphi$ sar\`a:
+\begin{equation}
+ \frac{\partial \varphi}{\partial x^{\mu}} = 
+  \left(
+   \frac{1}{c}\frac{\partial \varphi}{\partial t},
+   \mathbf{\nabla}\varphi
+  \right)
+\end{equation}
+Ci chiediamo ora se l'oggetto $\partial_{\mu}\varphi(x)$ \`e un
+vettore covariante. Verifichiamolo.
+\begin{equation}
+ \mathrm{d}\varphi=\frac{\partial \varphi}{\partial x^{\mu}} \, 
+  \mathrm{d}x^{\mu}
+\end{equation}
+\`e uno scalare, quindi deve ottenersi per contrazione di un
+quadrivettore covariante con uno controvariante.
+\begin{definizione}
+Analogamente
+$\partial^{\mu}$ \`e un quadrivettore controvariante, ed \`e
+definito da:
+\begin{equation}
+ \partial^{\mu} \equiv \frac{\partial}{\partial x_{\mu}} = 
+  \left(
+   \frac{\partial}{\partial x_0},
+   \frac{\partial}{\partial x_i}
+  \right) = 
+  \left(
+   \frac{1}{c}\frac{\partial}{\partial t},
+   -\mathbf{\nabla}
+  \right)
+\end{equation}
+\end{definizione}
+

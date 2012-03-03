@@ -1,0 +1,426 @@
+%#!simpdftex latex relativita.tex
+\chapter{Note storiche}
+\minitoc Come nasce la relativit\`a ristretta, altrimenti detta
+speciale? Nasce dal tentativo, riuscito, di conciliare meccanica
+newtoniana ed elettromagnetismo. Einstein stesso scrive a proposito:
+\begin{quote}
+  \enf{La teoria della relativit\`a nasce necessariamente, per la
+    presenza di serie e profonde contraddizioni, dalle quali sembrava
+    non ci fosse uscita. La forza della nuova teoria sta nella
+    consistenza e semplicit\`a con cui risolve queste difficolt\`a,
+    usando poche, ma convincenti, assunzioni.}
+\end{quote}
+Ma dove queste teorie, elettromagnetismo e meccanica, erano in
+disaccordo? 
+%Newton sosteneva l'esistenza di un tempo assoluto,
+%omogeneo (un tempo uguale per tutti gli osservatori, e indipendente
+%dal sistema di riferimento); affermava altres\`i che lo spazio era
+%assoluto, omogeneo, ed isotropo. Il sistema di riferimento ideale era
+%quello delle stelle, chiamato sistema di riferimento delle stelle
+%fisse, che per le conoscenze di allora erano, appunto, considerate
+%fisse.  \newline 
+Sostanzialmente sembrava che non si trovasse un gruppo di sistemi di
+riferimento in cui le leggi dell'elettromagnetismo avessero la stessa
+forma, ovvero per avere una descrizione dei fenomeni fisica, sembrava
+fosse necessario modificare le leggi dell'elettromagnetismo a seconda
+del sistema di riferimento in cui ci si trovava.
+
+Si ipotizz\`o dunque che fossero le leggi per passare da un sistema di
+riferimento all'altro ad essere sbagliate, ma a questo punto si rendeva
+necessario cambiare le leggi della meccanica da un sistema di
+riferimento all'altro.
+
+Prima di poter procedere \`e tuttavia necessario dare
+una definizione precisa di sistema di riferimento, in maniera da
+evitare errori o imprecisioni:
+\begin{definizione}
+  Un sistema di riferimento \`e l'insieme di un sistema di coordinate
+  e di orologi, sicronizzati tra loro, in grado d'associare ad ogni
+  evento un punto dello spazio e un istante di tempo. Un sistema di
+  riferimento in cui ogni corpo non soggetto a forze \`e in quiete o
+  in moto rettilineo, \`e detto sistema di riferimento inerziale.
+\end{definizione}
+La definizione precisa di evento verr\`a data pi\`u avanti, per ora
+possiamo prendere la nozione euristica che abbiamo di esso. Nei sistemi
+di riferimento in moto a velocit\`a costante rispetto a quello delle
+stelle fisse, le leggi della meccanica assumevano la stessa forma
+tramite le trasformazioni (\ref{eq:trasformazioni}). Quindi la terra
+poteva considerarsi un ottimo laboratorio, in quanto
+l'accelerazione\index{accelerazione!terrestre} che essa aveva, rispetto
+a tale sistema, poteva dirsi trascurabile. Questo era vero se, come
+detto, per collegare due sistemi di riferimento si utilizzavano le
+(\ref{eq:trasformazioni}). Pi\`u
+precisamente, detti $S$ ed $S'$ i due sistemi inerziali, $S'$ in moto
+con velocit\`a $\mathsf{v}$ rispetto ad $S$ (velocit\`a costante in
+direzione e modulo), si aveva che, se
+\begin{displaymath}
+  t,\mathbf{x} \mbox{ coordinate in S} \qquad t',\mathbf{x}' \mbox{
+    coordinate in S' }
+\end{displaymath}
+allora
+\begin{equation}
+  \left\{\begin{array}{l}
+      \mathbf{x}'=\mathbf{x}+\mathbf{\mathsf{v}}t\qquad
+      (\dagger)\\
+      t'=t\end{array}\right. \label{eq:trasformazioni}
+\end{equation}
+ Si aveva poi l'\enf{invarianza degli intervalli temporali}, ossia:
+\begin{equation}
+  \Delta t=\Delta t'\label{eq:invtempo}
+\end{equation}
+e degli \enf{intervalli spaziali}
+\begin{equation}
+  l = |\Delta\mathbf{x}| =
+  |\Delta\mathbf{x}'|=l'\label{eq:invspazio}
+\end{equation}  
+Vi era poi il:
+\begin{teorema}[di addizione delle velocit\`a]
+  \index{teorema!di addizione delle velocit\`a}
+  \begin{displaymath}
+    \mathbf{v}'=\frac{\de}{\de t}\mathbf{x}'=\frac{\de}{\de
+      t}\mathbf{x}+\mathbf{\mathsf{v}}=\mathbf{v}+\mathbf{\mathsf{v}}
+  \end{displaymath}
+\end{teorema}
+Tale teorema si ottiene derivando ($\dagger$), ed esso asserisce che
+non esiste una velocit\`a assoluta.  
+%
+\newline 
+%
+Come anticipato prima, tuttavia, con queste trasformazioni le leggi
+dell'elettromagnetismo non potevano essere valide in tutti i sistemi di
+riferimento. Vediamo come.
+\section{L'etere e l'elettromagnetismo di Maxwell}
+Prendiamo l'equazione delle onde elettromagnetiche:
+\begin{displaymath}
+  \left(\frac{1}{c^2}\cdot\frac{\partial^2}{\partial
+      t^2}-\mathbf{\nabla}^2\right)\mathbf{E}(\mathbf{x},t)=0 \qquad
+  \mbox{(al posto di $\mathbf{E}$ si pu\`o avere $\mathbf{B}$)};
+\end{displaymath}
+nell'800 ritenevano che $c$ fosse la velocit\`a della luce nell'etere
+luminifero (che porta la luce). Perch\'e si parlava di etere? 
+%
+%\newline
+%
+Come prima accennato, le leggi dell'elettromagnetismo non avevano la
+stessa forma in tutti i sistemi di riferimento, e quindi l'elegante
+forma proposta da Maxwell era corretta solo in un particolare di questi
+sistemi. Si ipotizz\`o questo sistema uguale al sistema di riferimento
+delle stelle fisse, e lo si ribattezz\`o etere, il sistema in cui le
+leggi di Maxwell erano vere senza bisogno di modifiche.
+%Si era
+%scoperto che le leggi dell'elettromagnetismo, se valide in un
+%determinato sistema di riferimento inerziale $S$, non lo erano pi\`u
+%in $S'$, sistema in moto a velocit\`a costante rispetto a $S$. 
+Vedere che in altri sistemi di riferimento queste modifiche erano
+necessarie, non \`e di difficile constatazione: si prenda infatti
+un'onda elettromagnetica (che ha la stessa velocit\`a di propagazione
+della luce) nel sistema $S$. Essa ha velocit\`a $c$, poich\'e per
+l'elettromagnetismo la velocit\`a di propagazione di tale onda \`e
+\begin{equation}
+  c=\frac{1}{\sqrt{\mu_0\varepsilon_0}};
+\end{equation}
+se $S'$ si muove con velocit\`a $\rem{v}$ in direzione e verso
+dell'onda elettromagnetica, esso rileva la luce avere velocit\`a
+$c'=c-\rem{v}$, per il teorema appena visto. Ma allora non sarebbe pi\`u
+valida la relazione (derivata dalle normali equazioni di Maxwell)
+\begin{displaymath}
+  c'=\frac{1}{\sqrt{\mu_0\varepsilon_0}}
+\end{displaymath}
+essendo $\mu_0$ e $\varepsilon_0$ costanti e \(c'\) la velocit\`a della
+luce per l'osservatore di \(S'\). Se ne deduce che una, ed
+una sola, delle seguenti ipotesi dev'essere vera:
+\begin{description}
+\item [Prima ipotesi] Le leggi della meccanica sono covarianti per
+  cambiamento di sistema di riferimento inerziale, ma non lo sono le
+  leggi dell'elettromagnetismo; le trasformazioni
+  (\ref{eq:trasformazioni}) sono giuste.
+\item [Seconda ipotesi] Le leggi della meccanica e
+  dell'elettromagnetismo sono covarianti per cambiamento di sistemi di
+  riferimento inerziale, le trasformazioni (\ref{eq:trasformazioni})
+  sono giuste, ma il modo in cui sono scritte le leggi
+  dell'elettromagnetismo \`e sbagliato.
+\item [Terza ipotesi] Le leggi della meccanica e
+  dell'elettromagnetismo sono covarianti per cambiamento di sistemi di
+  riferimento inerziale, il modo in cui sono scritte le leggi
+  dell'elettromagnetismo \`e giusto (si lascia dunque spazio ad
+	    un'eventuale riscrittura delle leggi della meccanica), ma le
+	    trasformazioni
+  (\ref{eq:trasformazioni}) sono sbagliate.
+\end{description}
+L'ipotesi corretta la avanz\`o Einstein, e verr\`a affrontata dopo. 
+%Se
+%l'ipotesi giusta fosse la seconda, esisterebbe un sistema privilegiato,
+%quello in cui le onde si propagano con velocit\`a $c$; in tale sistema,
+%detto etere, sarebbero valide le equazioni di Maxwell; si pensava tale
+%sistema fosse il sistema di riferimento delle stelle fisse.
+
+Nelle tre ipotesi abbiamo fatto uso del termine ``covarianti'':
+cosa significa? Una legge fisica \`e covariante quando ha la stessa
+forma per tutti i sistemi di riferimento inerziali; ad esempio nel
+sistema di riferimento $S$ la seconda legge
+di Newton si scrive 
+\begin{displaymath}
+ \bef{F} = m\bef{a}; 
+\end{displaymath}
+cambiando sistema di riferimento, sar\`a necessario usare delle
+trasformazioni di coordinate per poter scrivere la legge nel nuovo
+sistema; ebbene, usando le trasformazioni di Galileo e le leggi della
+meccanica conosciute, nel nuovo sistema di riferimento la
+``trasformazione'' della seconda legge di Newton \`e
+\begin{displaymath}
+  \bef{F'} = m'\bef{a'},
+\end{displaymath}
+dove \(m = m'\): dunque la legge della meccanica ha la stessa forma in
+entrambi i sistemi di riferimento, e si pu\`o parlare di covarianza.
+
+%Come sopra detto, $c$ era la velocit\`a della luce in tale sistema. La
+%domanda che a quel tempo ci si poneva era: 
+
+Assumendo dunque che l'esistenza dell'etere, era possibile trovare il
+moto della terra rispetto a tale sistema?  Vediamo ora due esperimenti
+che rispondono a tale domanda in maniera inconciliabile.
+\subsection{Esperimento sull'aberrazione}
+\index{aberrazione} \setlength{\unitlength}{0.7mm}
+\begin{wrapfigure}[17]{r}{4cm}
+  \begin{picture}(50,75)
+    \put(5,5){\line(1,0){40}}\multiput(25,5)(0,10){7}{\line(0,1){5}}
+    \put(22,70){\Huge$\star$} \put(20,5){\line(0,1){25}}
+    \put(20,30){\line(1,0){10}}\put(30,30){\line(0,-1){25}}
+    \put(28,5){\dashbox{2}(10,25){}}\put(30,17){\huge$\rightarrow$}
+    \put(32,21){v}
+  \end{picture}
+  \caption{Luce stellare incidente sul telescopio}
+  \label{fig:telescopio}
+
+\end{wrapfigure}
+\setlength{\unitlength}{1mm} Consideriamo il telescopio in figura
+\ref{fig:telescopio}. Ci proponiamo di andare a verificare l'angolo di
+inclinazione che esso deve avere per poter osservare la luce
+proveniente da un corpo celeste. Se la terra si muovesse con una certa
+velocit\`a rispetto a tale stella, le cose andrebbero come in figura,
+e il telescopio, senza alcun angolo di inclinazione, sarebbe
+inservibile. Infatti da quando il raggio della stella entra nel
+telescopio, a quando raggiunge l'ordinata dell'obbiettivo
+(consideriamo la stella, qualsiasi essa sia, solidale all'etere), il
+telescopio si sposta e la luce non colpisce l'obbiettivo. Quindi \`e
+necessario inclinare il telescopio. Chiamiamo l'angolo di inclinazione
+$\vartheta$ (\`e l'angolo formato dalla terra e dal lato pi\`u corto
+dell'obbiettivo). Per valutare approssimativamente la velocit\`a della
+terra rispetto al sistema delle stelle fisse, consideriamo il sole
+come una stella fissa; la distanza terra sole vale
+$R_{\scriptscriptstyle TS}\:=\:150\cdot10^9 \:m$. Il periodo di
+rivoluzione attorno al sole vale
+$T\:=\:365\:gg\:\Longrightarrow\:\mathsf{v}\:=\:3\cdot10^4\:\rem{m}/\rem{s}$.
+Se il telescopio \`e lungo $l$ (farsi un disegno per meglio capire),
+il tempo di percorrenza della luce \`e $t=l \cos \vartheta /c$. La
+distanza percorsa dal telescopio in $t$ \`e $x=\mathsf{v}t$.  L'angolo
+$\vartheta$ risulta dunque:
+\begin{displaymath}
+  \tan\vartheta= \frac{\mathsf{v} t}{l \cos \vartheta} =
+  \frac{\mathsf{v}t}{ct}\approx10^{-4}
+\end{displaymath}
+Come si vede quest'angolo \`e molto piccolo, ma le misure sono in
+accordo con la teoria, cio\`e \`e effettivamente necessario inclinare
+i telescopi di $\vartheta$ per poter osservare i raggi
+celesti.\footnote{Tuttavia quest'esperimento non fu considerato
+  decisivo, poich\'e esso utilizzava le apprissimazioni di ottica
+  geometrica dell'elettromagnetismo.}
+\subsection{L'esperimento di Michelson e Morley}
+\index{Michelson-Morley, esperimento di}L'esperimento di Michelson e
+Morley, effettuato per la prima volta nel 1881, era stato ideato per
+trovare la velocit\`a della luce rispetto all'etere.  L'esperimento
+\`e schematizzato in figura \vref{fig:mm}.
+\setlength{\unitlength}{0.5mm}
+\begin{figure}[htb]
+  \begin{center}
+    \begin{picture}(110,100)
+      \put(5,50){\vector(1,0){65}}\put(60,40){\line(1,1){20}}
+      \put(70,50){\vector(0,1){30}} \put(14,37){\tiny Specchio
+        semi-rifrangente}
+      \put(60,80){\line(1,0){20}}\multiput(60,80)(5,0){5}{\line(1,3){3}}
+      \put(70,80){\vector(0,-1){30}}\put(70,50){\vector(1,0){30}}
+      \put(100,40){\line(0,1){20}}
+      \multiput(100,40)(0,5){5}{\line(3,1){8}}
+      \put(70,50){\vector(0,-1){30}} \put(60,63){\vector(0,-1){13}}
+      \put(55,64){$L$} \put(60,67){\vector(0,1){13}}
+      \put(83,40){\vector(-1,0){13}}\put(87,40){\vector(1,0){13}}
+      \put(85,62){\tiny Specchio} \put(84,37){$L$} \put(83,80){\tiny
+        Specchio} \put(5,55){\tiny Sorgente}
+      \put(66.5,14.5){\Huge$\blacksquare$} \put(62,8){\tiny
+        Rilevatore} \put(3,45.8){\Huge$\blacktriangleright$}
+    \end{picture}
+    \caption{Schema dell'esperimento di Michelson e Morley, visto nel
+      sistema di riferimento solidale alla terra} \label{fig:mm}
+  \end{center}
+\end{figure}
+Spieghiamo cosa succede. La terra si muove con velocit\`a $\mathsf{v}$
+rispetto all'etere (secondo le convinzioni dell'epoca). Dunque i raggi
+che colpivano lo specchio semirifrangente, e si propagavano in
+direzione verticale, facevano un percorso, nel sistema di riferimento
+etere, come quello in figura \vref{fig:mim1} (tener ben presente il
+fatto che una volta raggiunto uno specchio, la luce si propaga come
+un'onda emisferica).
+\begin{figure}[htb]
+  \begin{center}
+    \begin{picture}(50,65)
+      \put(10,10){\vector(1,3){15}}\put(10,10){\line(1,0){15}}
+      \multiput(25,10)(0,10){5}{\line(0,1){5}}
+      \put(10,55){\line(1,0){30}}\put(25,55){\vector(1,-3){15}}
+      \put(35,5){\line(1,1){10}}
+      \multiput(10,55)(5,0){7}{\line(1,3){3}} \put(30,50){\tiny
+        Specchio}\put(42,8){\tiny Specchio
+        semi-rifrangente}\put(17.5,5){$\mathrm{v}t$} \put(22,25){$l$}
+      \put(13,36){$ct$}
+    \end{picture}
+    \caption{Percorso della luce in direzione verticale}
+    \label{fig:mim1}
+  \end{center}
+\end{figure}
+Dal disegno si capisce (\`e sufficiente usare il teorema di Pitagora)
+che $(ct)^2=l^2+(\mathsf{v}t)^2$, da cui risulta:
+\begin{equation}
+  t_{\perp}=2t=\frac{2l}{c}\frac{1}{\sqrt{1-\frac{\mathsf{v}^2}{c^2}}}.
+  \label{eq:mim1}
+\end{equation}
+L'altro raggio invece fa il percorso, nell'etere, in figura
+\ref{fig:mim2}. \setlength{\unitlength}{1mm}
+\begin{figure}[!h]
+  \begin{center}
+    \begin{picture}(65,28) \put(7.5,7.5){\line(1,1){10}}
+      \put(6,18){\scriptsize Specchio
+        semi-rifrangente}\put(12.5,12.5){\line(1,0){36}}
+      \put(27.5,12.5){\vector(1,0){8}}
+      \put(27.5,12.5){\vector(-1,0){5}} \put(48.5,2.5){\line(0,1){20}}
+      \multiput(48.5,2.5)(0,4){6}{\line(1,1){5}}
+      \put(12.5,12.5){$\underbrace{\makebox[36mm][c]{}}$}
+      \put(29,7){$L$}\put(57,12.5){Specchio}
+    \end{picture}
+    \caption{Percorso della luce in direzione orizzontale}
+    \label{fig:mim2}
+  \end{center}
+\end{figure}
+Si pu\`o facilmente capire che
+$t_{\sslash}=\frac{l}{c-v}+\frac{l}{v+c}$, da cui:
+\begin{equation}
+  t_{\sslash}=\frac{2l}{c}\cdot\frac{1}{1-\frac{\mathsf{v}^2}{c^2}}
+  \label{eq:mim2}
+\end{equation}
+Dal momento che $ \mathsf{v} < < c $ possiamo sviluppare in serie di $v^2 / c^2$
+la (\ref{eq:mim1}) e la (\ref{eq:mim2}), ottenendo:
+\begin{equation}
+  t_{\perp}=\frac{2l}{c}\left(1+\frac{1}{2}\frac{\mathsf{v}^2}{c^2}\right)
+\end{equation}
+\begin{equation}
+  t_{\sslash}=\frac{2l}{c}\left(1+\frac{\mathsf{v}^2}{c^2}\right)
+\end{equation}
+In definitiva $t_{\sslash} -
+t_{\perp}\simeq\frac{\mathsf{v}^2l}{c^3}$. Sempre facendo riferimento
+alla figura \vref{fig:mm}, si vede che i raggi, dopo esser tornati
+indietro, interferivano. Con un interferometro (il rivelatore della
+figura), si poteva misurare quest'interferenza. Lo sfasamento
+spaziale, in termini di lunghezza d'onda, \`e:
+
+\begin{displaymath}
+  \Delta\lambda=c(t_{\sslash}-t_{\perp})\simeq\frac{\mathsf{v}^2l}{c^2}
+\end{displaymath}
+
+
+Il numero di frange che si doveva dunque rilevare con l'interferometro
+era:
+\begin{displaymath}
+  \frac{\Delta n}{n} = 
+  \frac{\Delta\lambda}{\lambda}=\frac{l}{\lambda}\frac{\mathsf{v}^2}{c^2}
+\end{displaymath}
+L'esperimento del 1887 (quello eseguito con i migliori accorgimenti
+per diminuire gli errori di misura), aveva $l=11m$,
+$\lambda=6\cdot10^{-7}m$, $ \frac{v}{c}=10^{-4} $. Da questi dati
+risulta $\Delta n / n =0.18 \pm 0.01$. Tuttavia i risultati
+sperimentali davano $n = 0$: questo fatto rimaneva inspiegabile:
+l'etere si muoveva con la terra? Come era possibile interpretare tale
+fenomeno?
+\begin{observazione}[Fitzgerald e Lorentz] Una prima risoluzione del
+  problema fu avanzata da Fitzgerald (1889), il quale asseriva che il
+  braccio parallelo alla direzione del moto, si contraeva di un
+  fattore $\sqrt{1-\mathsf{v}^2/c^2}$. Poi venne Lorentz, che
+  afferm\`o che, nel caso fosse vera la contrazione di Fitzgerald,
+  allora anche i tempi del sistema in moto rispetto all'etere dovevano
+  dilatarsi dello stesso fattore $\sqrt{1-\mathsf{v}^2/c^2}$. In tal
+  modo egli trova le trasformazioni tra i sistemi di riferimento che
+  portano il suo nome (e che andremo a ricavare dopo).
+\end{observazione}
+\section{Princ\`ipi di relativit\`a}
+Successivamente la cosa venne affrontata da un punto di vista
+matematico: tra il 1902 e il 1905, Poincar\`e si avvicin\`o al
+principio di relativit\`a einsteniano, dicendo:
+\begin{principio}[di Relativit\`a di Poincar\`e]\index{principio di
+    relativit\`a!di Poincar\'e}
+  Le leggi della fisica devono essere covarianti (avere cio\`e la
+  stessa forma) per sistemi inerziali.
+\end{principio}
+Poincar\`e trov\`o dunque le trasformazioni di coordinate che resero
+l'elettrodinamica compatibile con il principio di relativit\`a. Tali
+trasformazioni sono le trasformazioni di Lorentz, che costituiscono un
+gruppo; tale gruppo pu\`o essere ampliato ulteriormente, mantenendo la
+sua struttura, dando origine al gruppo di Poincar\`e.
+
+Venne poi la volta di Einstein (1905), il quale pose alla base della
+sua teoria due principi:
+\begin{dinglist}{192}
+\item Principio di relativit\`a
+\end{dinglist}
+\begin{dinglist}{193}
+\item La velocit\`a della luce \`e uguale in tutti i sistemi di
+  riferimento inerziali
+\end{dinglist}
+Quale fu la grande innovazione di Einstein rispetto a Poincar\`e?  Il
+fatto che egli elimin\`o il concetto di etere.\footnote{Ad inizio
+  capitolo abbiamo imbrogliato il lettore, dicendo che la relativit\`a
+  ristretta nasce per i contrasti tra elettromagnetismo e meccanica:
+  Einstein, nello sviluppare la sua teoria, venne invece mosso dalla
+  convinzione che non potesse esistere un sistema di riferimento
+  privilegiato, ovvero di un moto assoluto, che portasse delle
+  asimmetrie nell'elettromagnetismo; che questo risolvesse i contrasti
+  di cui abbiamo parlato \`e un altro discorso, poich\'e non era
+  possibile risolvere il dilemma di Einstein senza appianare i
+  contrasti tra meccanica ed elettrodinamica.}
+
+
+Successivamente, dall'invarianza di $c$, Einstein, con una serie di
+esperimenti ideali, ricav\`o tutta una serie di leggi, tra cui le
+trasformazioni di Lorentz. Cominciamo con lo scrivere gli assiomi alla
+base della sua teoria.
+\begin{dinglist}{202}
+\item Omogeneit\`a e assolutezza dello spazio e del tempo, e isotropia
+  (non vi sono differenze tra le direzioni) dello spazio. \footnote{In
+    realt\`a questo primo assioma era implicito nella sua trattazione}
+\end{dinglist}
+\begin{dinglist}{203}
+\item Si ha l'equivalente del principio di relativit\`a di Poincar\`e:
+  \begin{principio}[di Relativit\`a einsteniano]\index{principio di
+      relativit\`a!di Einstein} Le leggi della
+    fisica hanno la stessa forma in tutti i sistemi inerziali.
+  \end{principio}
+\end{dinglist}
+\begin{dinglist}{204}
+\item La velocit\`a della luce nel vuoto\footnote{Ossia assenza di
+    materia} \`e la stessa in tutti i sistemi di riferimento inerziali
+\end{dinglist}
+\begin{osservazione}
+  Osserviamo che \ding{202} era valido anche prima della teoria della
+  relativit\`a di Einstein
+\end{osservazione}
+\begin{osservazione}
+  Nella fisica pre-relativistica \ding{203} era sostituito dal
+  principio di \emph{relativit\`a galileiano}, il quale asseriva:
+\end{osservazione}
+\begin{principio}[di Relativit\`a di Galileo]\index{principio di
+    relativit\`a!di Galileo} Le leggi della meccanica hanno la stessa
+  forma in tutti i sistemi inerziali.\footnote{Come gi\`a notato,
+    ci\`o era impossibile per l'elettromagnetismo, se si usavano le
+    trasformazioni di Poincar\'e.}
+\end{principio}
+\begin{osservazione}
+  In fisica pre-relativistica \ding{204} era sostituita
+  dall'invarianza degli intervalli spaziali (\ref{eq:invspazio}) e
+  temporali (\ref{eq:invtempo})
+\end{osservazione}

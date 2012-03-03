@@ -1,0 +1,895 @@
+\chapter{Elettromagnetismo}
+\minitoc In questa dispensa ci siamo occupati, finora, di ridefinire
+la dinamica e la meccanica classica, e i risultati sono stati dinamica
+e meccanica relativistica. In questo capitolo ci occuperemo non di
+ridefinire l'elettromagnetismo, in quanto esso gi\`a rispetta il
+principio di relativit\`a einsteiniano, bens\`i di darne la sua
+formulazione covariante.  Procedendo, inoltre, andremo incontro ad una
+nuova unificazione concettuale di campo elettrico e campo magnetico,
+in quanto saranno due lati diversi di uno stesso oggetto rappresentato
+dal tensore del campo elettromagnetico\index{campo!elettromagnetico}.
+
+\section{Il sistema di Gauss}
+Per affrontare la nostra trattazione, introduciamo le equazioni di
+Maxwell nel sistema di Gauss\index{equazioni!di Maxwell}:
+\begin{equation}
+  \mathbf{\nabla \cdot B } = 0, \label{eq:divergenzab}
+\end{equation}
+la quale \`e omogenea ed esprime che la divergenza del campo magnetico
+\`e sempre pari a 0. Abbiamo poi:
+\begin{equation}
+  \mathbf{\nabla \times E } + \frac{ \partial \mathbf{B}}{ \partial
+    x^0 } = 0. \label{eq:rotoree}
+\end{equation}
+Tale equazione \`e omogenea ed esprime l'irrotazionalit\`a del campo
+elettrico, a meno di una variazione temporale del campo
+magnetico. Invece
+\begin{equation}
+  \mathbf{\nabla \cdot E }  = 4 \pi \rho \label{eq:divergenzae}
+\end{equation}
+non \`e equazione omogenea invece, ed afferma che la sorgente del
+campo elettrico \`e la densit\`a di carica. In ultima:
+\begin{equation}
+  \mathbf{\nabla \times B } = \frac{ \partial \mathbf{E}}{ \partial
+    x^0 } + \frac{ 4 \pi }{c} \mathbf{ j } \label{eq:rotoreb}
+\end{equation}
+non omogenea; essa afferma che il rotore del campo magnetico \`e
+dovuto alla variazione temporale del campo elettrico, ed alla
+densit\`a di corrente.  \newline Dalla (\ref{eq:divergenzab}) ne esce:
+\begin{equation}
+  \mathbf{B} = \mathbf{\nabla \times A}, \label{eq:rotorea}
+\end{equation}
+nella quale $A$ \`e il potenziale \index{potenziale!generalizzato}
+generalizzato di $B$. Usando nella (\ref{eq:rotoree}) tale equazione
+ottengo:
+\begin{equation}
+  \mathbf{\nabla} \times \left(\mathbf{E} + \frac{\partial
+      \mathbf{A}}{\partial x^0}\right) = 0. \label{eq:rotoreepiua}
+\end{equation}
+Da questa ricavo l'esistenza di un potenziale \index{potenziale!del
+  campo elettrico}scalare $\varphi$ t.c.:
+\begin{equation}
+  \mathbf{E} = - \mathbf{\nabla} \varphi - \frac{ \partial
+    \mathbf{A}}{\partial x^0}. \label{eq:potenzialee}
+\end{equation}
+
+\section{Il tensore $F^{\mu\nu}$}
+Ci occupiamo in questa sezione di introdurre il tensore $F^{\mu\nu}$,
+che racchiude in s\`e campo elettrico e magnetico. La sua comodit\`a
+sta nel fatto che, dopo averlo scritto in un sistema di riferimento,
+\`e possibile conoscerne la forma in qualsiasi altro sistema,
+applicandovi le opportune matrici. Per comiciare osserviamo che
+$\bef{B}$ e $\bef{E}$ sono invarianti sotto trasformazioni di
+$\bef{A}$ e $\varphi$, fatte in tale modo ($\la$ \`e una funzione non
+meglio specificata per ora):
+\begin{equation}
+  \begin{array}{cccccl}
+    \bef{A} & \longrightarrow & \bef{A'} & = & \bef{A} - \bef{\nabla} \la &\\
+    \varphi & \longrightarrow & \varphi' & = & \varphi +
+    \partial_0 \la &
+  \end{array},
+  \label{eq:gauge}
+\end{equation}
+chiamate trasformazioni di gauge\index{trasformazioni!di gauge}.
+\newline Poich\'e $\partial_0 = \partial^0 $, e $ - \bef{ \nabla } =
+\partial^i = g^{i\mu}\partial_{\mu}$, e dacch\'e $\partial^{\mu}$ \`e
+un quadrivettore controvariante, la (\ref{eq:gauge}) suggerisce che $
+( \varphi , \bef{A} ) = A^{\mu} $, siano le quattro componenti di un
+quadrivettore controvariante che trasforma per gauge; infatti, se
+nella seguente equazione $\partial^{\mu}\la$ \`e un quadrivettore (il
+che accade se \la \ \`e uno scalare), per consistenza anche $A^{\mu}$
+dev'essere un quadrivettore:
+$$
+A^{'\mu} = A^{\mu} + \partial^{\mu}\la.
+$$
+A questo punto possiamo dare la:
+\begin{definizione}[Quadritensore $F^{\mu\nu}$]
+  Il tensore di rango due controvariante $F^{\mu\nu}$ \`e definito da
+$$
+F^{\mu\nu} = \partial^{\mu}A^{\nu} - \partial^{\nu}A^{\mu}.
+$$
+\end{definizione}
+\begin{osservazione}
+  \f \ \`e anti-simmetrico, e che:
+$$
+F^{i0} = \partial^i A^0 - \partial^0 A^i = -\frac{\partial
+  \varphi}{\partial x^i} - \frac{\partial A^i}{\partial x^0} = E^i.
+$$
+Inoltre:
+$$
+F^{12} = - \frac{\partial A^2}{\partial x^1} + \frac{\partial
+  A^1}{\partial x^2} = - (\bef{\nabla \times A})_3 = - B_3,
+$$
+ed analogamente:
+$$
+F^{23} = - B_1;
+$$
+a questo punto si intuisce la regola (che il lettore incredulo potr\`a
+``sperimentalmente'' controllare):
+\begin{equation}
+  F^{ij} = - \varepsilon^{ijk}B_{k} \label{eq:fepsilon}
+\end{equation}
+e dunque:
+\begin{equation}
+  \f= \left(
+    \begin{array}{cccc}
+      0    &  -E_1  &  -E_2  &  -E_3 \\
+      E_1  &    0   &  -B_3  &   B_2 \\
+      E_2  &   B_3  &    0   &  -B_1 \\
+      E_3  &  -B_2  &   B_1  &    0  \\
+    \end{array}
+  \right).
+\end{equation}
+Invece $F_{\mu\nu} = g_{\rho \mu} g_{\nu \sigma} F^{\rho \sigma}$.
+\end{osservazione}
+Enunciamo e dimostriamo ora delle importanti proposizioni:
+\begin{proposizione}
+  L'equazione $ \varepsilon_{\mu\nu\rho\sigma}
+  \partial^{\nu} F^{\rho\sigma} = 0 $ \`e equivalente
+  alla~(\ref{eq:divergenzab}) e alla~(\ref{eq:rotoree}).
+\end{proposizione}
+\begin{dimostrazione}
+  Mostriamo innanzi tutto che $ \varepsilon_{\mu\nu\rho\sigma}
+  \partial^{\nu} F^{\rho\sigma} = 0 $, e poi facciamo vedere la sua
+  equivalenza con le due equazioni di Maxwell in esame. Si ha:
+  \begin{eqnarray*}
+    \varepsilon_{\mu\nu\rho\sigma}
+    \partial^{\nu} F^{\rho\sigma} & = & \varepsilon_{\mu\nu\rho\sigma}
+    \partial^{\nu}(\ff{\rho}{\sigma}) \\
+    & \stackrel{\mbox{\tiny cambio nomi agli indici}}{=} &
+    \varepsilon_{\mu\nu\rho\sigma}
+    \partial^{\nu}
+    \partial^{\rho} A^{\sigma} - \varepsilon_{\mu\nu\sigma\rho} \partial^{\nu}
+    \partial^{\rho} A^{\sigma} \\
+    & \stackrel{\mbox{\tiny per le propriet\`a di } \varepsilon}{=} &
+    2 \varepsilon_{\mu\nu\rho\sigma}
+    \partial^{\nu}
+    \partial^{\rho} A^{\sigma}\\
+    & = & 0
+  \end{eqnarray*}
+  L'ultima uguaglianza discende dal fatto che la contrazione di indici
+  simmetrici (quelli delle derivate) con indici antisimmetrici (quelli
+  di \f), d\`a 0, come si pu\`o facilmente verificare. Perci\`o
+  $\varepsilon_{\mu\nu\rho\sigma}
+  \partial^{\nu} F^{\rho\sigma} = 0$. Prendiamo $\mu = 0$; allora per
+  la struttura di $\varepsilon_{ijkl}$, $\nu = i$, $\rho = j$, $\sigma
+  = k$, e
+  \begin{eqnarray*}
+    \varepsilon_{0ijk} \partial^i F^{jk} & = & \varepsilon_{0123}
+    \partial^1 F^{23} + \ldots\\
+    & = & \frac{\partial ( -B_1 )}{\partial x^1} + \frac{\partial (
+      -B_2 )}{\partial x^2} + \ldots \\
+    & = & -2 \, \bef{\nabla \cdot B};
+  \end{eqnarray*}
+  Dunque abbiamo dimostrato che $\varepsilon_{\mu\nu\rho\sigma}
+  \partial^{\nu} F^{\rho\sigma} = 0 \Longleftrightarrow \bef{\nabla
+    \cdot B} = 0$. Passiamo ora alla seconda parte, prendendo in
+  considerazione gli indici spaziali, ovvero sia $ \mu = 1,2,3 $.
+  Allora:
+  \begin{eqnarray*}
+    \varepsilon_{iljk} \partial^l F^{jk} & = & \varepsilon_{i0jk}
+    \partial^0 F^{jk} + \varepsilon_{ij0k}
+    \partial^j F^{0k} + \varepsilon_{ijk0}
+    \partial^j F^{k0} \\
+    & = & - 2 \frac{\partial B_i}{\partial x^0} + 2 \varepsilon_{ijk0}
+    \partial^j F^{k0} \\
+    & = & - 2 \frac{\partial B_i}{\partial x^0} + 2
+    \varepsilon_{ijk}\partial^j E_k \\
+    & = & -2 \left[\frac{\partial B_i}{\partial x^0} + (\bef{\nabla
+        \times E})_i \right],
+  \end{eqnarray*}
+  che \`e quanto si richiedeva.
+\end{dimostrazione}
+Segue ora un'importante
+\begin{definizione}
+  Il tensore quadricorrente \index{quadricorrente}$j^{\nu}$ \`e
+  quell'oggetto le cui componenti sono $(c\rho, \bef{j})$, ove $\rho$
+  \`e l'usuale densit\`a di carica\index{carica!densit\`a di}, e
+  $\bef{j}$ \`e l'usuale densit\`a di corrente\index{densit\`a di
+    corrente}.
+\end{definizione}
+Possiamo passare ora a dimostrare un'altra importante
+\begin{proposizione}
+  L'equazione $ \partial_{\mu} F^{\mu\nu} = j^{\nu}4 \pi /c $ \`e
+  equivalente alla~(\ref{eq:divergenzae}) e alla~(\ref{eq:rotoreb}).
+\end{proposizione}
+\begin{dimostrazione}
+  Prendiamo $\nu = 0$: allora $\mu = i$, e si ha:
+$$
+\partial_i F^{i0} = \partial_i E_i = \bef{\nabla \cdot E},
+$$
+che \`e quanto si richiede per la prima parte. Se invece $\nu = j$,
+$\mu$ pu\`o essere sia spaziale che temporale. Dunque:
+\begin{eqnarray*}
+  \partial_{\mu}F^{\mu j} & = & \partial_0 F^{0j} + \partial_i F^{ij}\\
+  & \stackrel{(\ref{eq:fepsilon})}{=} & - \frac{\partial E_j}{\partial x^0}
+  - \frac{\partial }{\partial x^1}
+  \varepsilon^{ijk}B_k\\
+  & = & - \frac{\partial E_j}{\partial x^0}
+  + (\bef{\nabla \times B})_i,
+\end{eqnarray*}
+il che ci permette di concludere.
+\end{dimostrazione}
+Come si sa, dalla (\ref{eq:divergenzae}), discende l'equazione di
+continuit\`a e perci\`o deve valere il seguente
+\begin{corollario}
+  Da $\partial_{\mu} \f = j^{\nu}4 \pi /c$ discende l'equazione di
+  continuit\`a.
+\end{corollario}
+\begin{dimostrazione}
+  Infatti, moltiplicando ambo i membri di $\partial{\mu} \f = j^{\nu}4
+  \pi /c$ per $\partial_{\nu}$ si ha, per contrazione di indici
+  simmetrici con antisimmetrici:
+$$
+0 = \partial_{\nu}\partial_{\mu} \f = \partial_{\nu} j^{\nu}4 \pi /c;
+$$
+allora
+$$
+0 = \partial_{\nu} j^{\nu} = \partial_{0} j^{0} -
+\partial_{i} j^{i} = \frac{\partial c \rho}{\partial c t} +
+\bef{\nabla \cdot j} = \frac{\partial \rho}{\partial t} + \bef{\nabla
+  \cdot j},
+$$
+da cui l'equazione di continuit\`a.
+\end{dimostrazione}
+\begin{proposizione}
+  L'equazione di Lorentz \index{equazione!di Lorentz}per la
+  carica\index{carica!in campo elettromagnetico} in campo
+  elettromagnetico:
+$$
+\frac{\de \bef{p}}{\de t} = e \left[ \bef{E} + \frac{\bef{v}}{c}
+  \times \bef{B}\right]
+$$
+e la legge di potenza per la carica in campo elettromagnetico:
+$$
+\frac{\de \mt{E}}{\de t} = e \, \bef{E \cdot v},
+$$
+sono equivalenti a:
+$$
+\frac{\de p^{\mu}}{\de s}=\frac{e}{c}\, \f u_{\nu}.
+$$
+\end{proposizione}
+\begin{dimostrazione}
+  Osserviamo che:
+$$
+\frac{\de p^{\mu}}{\de s} = \frac{\de p^{\mu}}{\de t}\frac{\gamma}{c};
+$$
+dunque dobbiamo innanzi tutto mostrare che:
+$$
+\frac{\de \bef{p}}{\de t}\frac{\gamma}{c} = \frac{\gamma}{c} \, e
+\left[ \bef{E} + \frac{\bef{v}}{c} \times \bef{B}\right].
+$$
+Per farlo prendiamo la componente spaziale di $\f u_{\nu}$, ovvero
+prendiamo $\mu = i$; allora:
+$$
+F^{i0}u_0 + F^{ij}u_j = \left[ E_i + (\frac{\bef{v}}{c} \times
+  \bef{B})_i \right] \gamma,
+$$
+e ci\`o permette di concludere la prima parte. Per la seconda si ha:
+$$
+\frac{\de p^{0}}{\de s} = \frac{e}{c}\, F^{0i}u_i;
+$$
+allora:
+$$
+\frac{\de p^{0}}{\de t} = \frac{e}{c}\, \bef{E \cdot v},
+$$
+il che \`e equivalente, ricordando la (\ref{eq:quadrimpulso}), a
+$$
+\frac{\de \mt{E}}{\de t} = e \,\bef{E \cdot v}.
+$$
+\end{dimostrazione}
+Ci domandiamo ora se \`e possibile costruire degli invarianti, o
+scalari, utili con il tensore doppio \f. La risposta \`e nella:
+\begin{proposizione}
+  Gli scalari $F_{\mu\nu}\f$ ed
+  $\varepsilon_{\mu\nu\rho\sigma}F^{\mu\nu}F^{\rho\sigma}$ sono
+  invarianti, in quanto scalari (e sono scalari in quanto si ottengono
+  dalla contrazione di indici covarianti con indici controvarianti), e
+  valgono, rispettivamente,
+$$
+2(\bef{B^2-E^2})
+$$
+$$
+-8 (\bef{E\cdot B}).
+$$
+\end{proposizione}
+\begin{dimostrazione}
+  Si verificano entrambi con un semplice calcolo:
+  \begin{eqnarray*}
+    F_{\mu\nu}\f & = & F_{0i}F^{0i} + F_{i0}F^{i0} + \ldots \\
+    & = & 2 (-E_i^2 + B_i^2)\\ & = & 2 (\bef{B^2-E^2});
+  \end{eqnarray*}
+  \begin{eqnarray*}
+    \varepsilon_{\mu\nu\rho\sigma}F^{\mu\nu}F^{\rho\sigma} & = &
+    \varepsilon_{0123}F^{01}F^{23} + \ldots \\
+    & = & 8 (\mbox{}-E_1 B_1 - E_2 B_2 -E_3 B_3)\\
+    & = & -8 (\bef{E\cdot B}).
+  \end{eqnarray*}
+\end{dimostrazione}
+
+\section{\f \ sotto trasformazioni di Lorentz}
+In questa sezione andiamo ad analizzare come il tensore
+elettromagnetico \f \ cambia sotto trasformazioni di Lorentz.  Essendo
+un tensore controvariante di rango 2, esso trasformer\`a, sotto $\la
+\in \mt{L}_{+}^{\uparrow}$ in questo modo:
+\begin{displaymath}
+F^{'\mu\nu}(\bef{x}') = \la^{\mu}{}_{\rho}\la^{\nu}{}_{\sigma}
+F^{\rho\sigma}(\bef{x}),
+\end{displaymath}
+dove $\bef{x}'=\la \bef{x}$. Se \la \ rappresenta una trasformazione
+propria di Lorentz lungo $x$, allora:
+\begin{displaymath}
+\la = \left(
+  \begin{array}{cccc}
+    \gamma & - \beta \gamma & 0 & 0\\
+    -\beta \gamma & \gamma & 0 & 0\\
+    0&0&1&0\\
+    0&0&0&1
+  \end{array}
+\right).
+\end{displaymath}
+Calcoliamoci qualche componente di \f \, per capire cosa e come
+cambia:
+\begin{eqnarray*}
+  -E'_1  =  F^{'01} & = &
+  \la^0{}_{\rho}\la^{1}{}_{\sigma}F^{\rho\sigma}\\
+  & = & \la^0{}_{0}\la^{1}{}_{\sigma}F^{0\sigma} +
+  \la^0{}_{1}\la^{1}{}_{\sigma}F^{1\sigma} \\
+  & = & \la^0{}_{0}\la^{1}{}_{1}F^{01} +
+  \la^0{}_{1}\la^{1}{}_{0}F^{10} \\
+  & = & \left( \gamma^2 - \beta^2\gamma^2\right)F^{01}\\
+  & = & F^{01} = -E_1,
+\end{eqnarray*}
+mentre, ad esempio, per una componente che non sia lungo l'asse delle
+$x$:
+\begin{eqnarray*}
+  -E'_2  =  F^{'02} & = &
+  \la^0{}_{\rho}\la^{2}{}_{\sigma}F^{\rho\sigma} \\
+  & = & \la^0{}_{\rho}\la^{2}{}_{2}F^{\rho2}\\
+  & = & \la^0{}_{0}\la^{2}{}_{2}F^{02} +
+  \la^0{}_{1}\la^{2}{}_{2}F^{12} \\
+  & =& \gamma F^{02} -\beta\gamma F^{12}\\
+  & = & \gamma \left( -E_2 + \beta B_3 \right).
+\end{eqnarray*}
+Risparmiando al lettore (e a me), i calcoli di tutte le altre
+componenti, riportiamo solo i risultati:
+\begin{eqnarray*}
+  E'_1 & = & E_1\\
+  E'_2 & = & (E_2 - \beta B_3) \gamma\\
+  E'_3 & = & (E_3 + \beta B_2) \gamma\\
+  B'_1 & = & B_1\\
+  B'_2 & = & (B_2 + \beta E_3) \gamma\\
+  B'_3 & = & (B_3 - \beta E_2) \gamma.
+\end{eqnarray*}
+Cosa \`e possibile fare con questo risultato? Prendiamo in
+considerazione $\bef{E}$ e $\bef{B}$ costanti. Si hanno quattro
+possibilit\`a:
+\begin{enumerate}
+\item $\bef{E \cdot B} = 0$, con $\bef{B^2-E^2}<0$;
+\item $\bef{E \cdot B} = 0$, con $\bef{B^2-E^2}=0$;
+\item $\bef{E \cdot B} = 0$, con $\bef{B^2-E^2}>0$;
+\item $\bef{E \cdot B} \neq 0$.
+\end{enumerate}
+Con opportune trasformazioni di Lorentz
+\begin{enumerate}
+\item porta a solo $\bef{E}$;
+\item non porta a nessuna situazione interessante;
+\item porta a solo $\bef{B}$;
+\item porta a $\bef{E \sslash B}$.
+\end{enumerate}
+Vediamo come. Ricordando Lorentz lungo $x$, partiamo dalla 1; campo
+elettrico e campo magnetico sono ortogonali, e
+\begin{displaymath}
+\frac{\bef{|B|}}{\bef{|E|}}<1;
+\end{displaymath}
+scelgo gli assi nella maniera pi\`u comoda, e precisamente tali che
+$\bef{E} = (0,|\bef{E}|,0)$, $\bef{B} = (0,0,|\bef{B}|)$. Il risultato
+che voglio ottenere da 1. \`e che $\bef{B'} = 0$ e ci\`o comporta:
+\begin{equation}
+  \left\{
+    \begin{array}{ccccc}
+      B_{y}' & = & B_y & = & 0\\
+      B_{x}' & = & B_x & = & 0\\
+      B_{z}' & = & \gamma(B_z - \beta E_y) & = & 0\\
+    \end{array}.
+  \right.
+\end{equation}
+Le prime due sono gi\`a soddisfatte, la terza \`e soddisfatta se
+$\beta = |B_z|/|E_y|$, e la condizione \`e possibile poich\'e, per
+ipotesi $|B_z|/|E_y|<1$ (e tale ipotesi deve valere perch\'e
+$\beta<1$, ovvero affinch\'e la trasformazione esista.). Si lascia per
+esercizio il dimostrare che da 3. si pu\`o arrivare ad una situazione
+in cui ci sia solo $\bef{B}$, mentre si passa a far vedere che da
+4. si pu\`o arrivare a campo magnetico parallelo a campo elettrico. Se
+effettuo una trasformazione lungo l'asse delle $x$, posso prendere
+$E'_x = E_x = 0$, e $B'_x = B_x = 0$. Deve poi valere:
+\begin{displaymath}
+\bef{E'\times B'}=0,
+\end{displaymath}
+che porta a:
+\begin{equation}
+  E'_y B'_z - E'_z B'_y = 0, \label{eq:eparallelob}
+\end{equation}
+pi\`u ad altre due equazioni che sono sempre vere se $E'_x = B'_x =
+0$; la (\ref{eq:eparallelob}) d\`a:
+\begin{eqnarray*}
+  \gamma (E_y - \beta B_z)\gamma (B_z - \beta E_y) - \gamma (E_z -
+  \beta B_y)\gamma (B_y - \beta E_z) & = & \\
+  \mbox{} - \beta (\bef{B^2 + E^2}) + (1+\beta^2)(E_y B_z - E_z B_y)
+  & = & 0
+\end{eqnarray*}
+e questa impone che debba valere
+\begin{equation}
+  \frac{\bef{E \times B}}{\bef{B^2 + E^2}} =
+  \frac{\vec{\beta}}{1+\beta^2};
+\end{equation}
+il secondo membro di quest'equazione ha come dominio di $\beta$
+l'intervallo $[0,1]$, e dunque come codominio $[0,0.5]$. Posso
+trovarmi esplicitamente $\beta$ da questa relazione, ma \`e vero che
+\begin{displaymath}
+0 <\frac{|\bef{E \times B}|}{\bef{B^2 + E^2}}<\frac{1}{2}\,?
+\end{displaymath}
+
+Dacch\'e $|\bef{E \times B}|\leq |\bef{E}||\bef{B}|$, devo mostrare
+che $2|\bef{E}||\bef{B}|\leq \bef{B^2 + E^2} $: ma \`e sempre vero,
+poich\'e quanto appena scritto \`e vero essendo equivalente a:
+\begin{displaymath}
+\bef{|E| + |B|}\geq0,
+\end{displaymath}
+il che ci d\`a modo di concludere.
+\section{ La $\delta$ di Dirac}\index{delta!di Dirac}
+La fisica relativistica, come gi\`a accennato in precendenza, si
+configura come campo di studio molto utile per descrivere le
+interazioni tra particelle elementari. Tuttavia in relativit\`a non
+esistono corpi rigidi\footnote{Si prenda una sfera di raggio $R$. Se
+  essa fosse rigida, l'informazione di un colpo di un proiettile ad
+  una sua estremit\`a, si propagherebbe istantaneamente all'altra sua
+  estremit\`a, per la rigidit\`a del corpo. Questo tuttavia \`e
+  impossibile per la finitezza della velocit\`a dell'informazione.}, e
+quindi \`e comodo, e produce risultati in accordo con la pratica,
+trattare ogni particella come puntiforme, in quanto \`e molto
+difficoltoso considerare tutti i corpi come elastici. Tuttavia non \`e
+rigoroso, dal punto di vista matematico, l'approssimazione
+puntiforme. Si prenda infatti un elettrone dentro un volumetto $\de
+V$, la cui posizione sia costantemente associata al vettore
+$\bef{x}$. Se volessimo avere la funzione densit\`a di carica in
+$\de\,V$, necessiteremmo di una funzione $\rho(\bef{z})$ identicamente
+uguale a 0, tranne che per $\bef{z}=\bef{x}$. Integrando questa
+funzione sul volumetto dovremmo trovare $e = - 1.6 \times 10^{-19}
+C$. Ma l'integrale di una funzione quasi ovunque nulla d\`a 0, per
+noti risultati dell'analisi matematica. Si dovette quindi introdurre
+la cosiddetta $\delta$ di Dirac, che si pu\`o trattare come,
+rigorosamente, un funzionale\footnote{Pi\`u precisamente di una
+  distribuzione con dominio in $\mt{D^{*}}$.}, che ad ogni funzione
+associa il valore della funzione nell'origine.  Dunque:
+\begin{equation}
+  <\delta,\varphi> = \varphi(0),
+  \label{eq:fun_delta}
+\end{equation}
+se $\varphi \in C^{\infty}_C$\footnote{$C^{\infty}_C$ \`e lo spazio
+  vettoriale delle funzioni infinitamente derivabili e a supporto
+  compatto} e $\lim_{x\rightarrow\infty} \varphi^{(n)} = 0$; si pu\`o
+alternativamente dire che la $\delta$ associa a $\varphi$ la funzione:
+\begin{equation}
+  \int_{\mathbb{R}} \, \delta (x) \, \varphi(x) \, \de  x =
+  \varphi(0).
+  \label{eq:int_delta}
+\end{equation}
+La $\delta$ di Dirac gode di alcune propriet\`a, che andiamo ad
+elencare:
+\begin{equation}
+  \int \, \delta(x)\, \de  x = 1
+\end{equation}
+\begin{equation}
+  \delta(x) = 0 \; \forall\,x \neq 0
+  \label{eq:eg_delta}
+\end{equation}
+\begin{equation}
+  \delta(x) = \infty \; \mbox{se } x=0.
+  \label{eq:imp_delta}
+\end{equation}
+Vi \`e poi $\delta (x - a)$, che pu\`o dirsi il funzionale che opera
+in tale maniera (la $\varphi$ soddisfa le ipotesi sopraelencate):
+$$
+<\delta_a,\varphi> = \varphi(a).
+$$
+
+Passiamo ora ad enunciare la
+\begin{proposizione}
+  \label{prop:derivata_delta}
+  La derivata della $\delta$ \`e quel funzionale che opera in tal
+  modo:
+$$
+<\delta', \varphi> = - \varphi'(0)
+$$
+\end{proposizione}
+\begin{dimostrazione}
+  \begin{eqnarray*}
+    \int_{-\infty}^{+\infty} \frac{\de }{\de x}\delta(x) \varphi(x) \de
+    x & = & [\delta(x)\varphi(x)]_{-\infty}^{+\infty} -
+    \int_{-\infty}^{+\infty} \delta(x) \frac{\de}{\de x} \varphi(x)
+    \de x
+    \\
+    & = &  0 - \int_{-\infty}^{+\infty} \delta(x) \frac{\de}{\de x}\,
+    \varphi(x) \de x \\
+    & = & - \frac{\de}{\de x} \, \varphi(0)
+  \end{eqnarray*}
+\end{dimostrazione}
+A questo punto si possono estendere le propriet\`a a spazi
+$n-$dimensionali. In particolare la $\delta$ 3-dimensionale \`e quel
+funzionale t.c.
+$$
+<\delta^{(3)},\varphi> = \int_{\mathbb{R}^3} \varphi(\bef{x})
+\delta^{(3)} (\bef{x-a}) \de x \, \de y \, \de z = \varphi(\bef{a}).
+$$
+Ora \`e chiaro che la densit\`a di carica dell'elettrone nel volumetto
+pu\`o scriversi:
+$$
+\rho(\bef{x}) = e \, \delta^{(3)}(\bef{x-z}),
+$$
+dove $\delta^{(3)}(\bef{x-z}) = \delta(x^1-z^1) \, \delta(x^2-z^2) \,
+\delta(x^3-z^3)$, e $\varphi (x) = \chi_{\scriptscriptstyle \de V}(x)$
+(vale 1 se $x \in \de V$, 0 altrimenti). Si estende in maniera
+naturale agli spazi con pi\`u dimensioni.
+\begin{observazione}
+  In realt\`a non \`e corretto affermare $\delta(0)= + \infty$, n\'e
+  ha molto senso l'integrale (\ref{eq:int_delta}), per i motivi
+  ricordati prima, ovvero che una funzione che sia nulla quasi ovunque
+  non pu\`o avere integrale di Lebesgue non nullo: l'unica notazione
+  che ha senso \`e la (\ref{eq:fun_delta}), che definisce la $\delta$,
+  come funzionale: la funzione rappresentativa $\delta(x)$ ha senso
+  solo per $x \neq 0$ (ovvero la \ref{eq:eg_delta}); inoltre usare la
+  funzione rappresentativa \`e comodo, come si \`e potuto constatare
+  nella dimostrazione della proposizione
+  \ref{prop:derivata_delta}. Per motivi storici, tuttavia, ho
+  preferito scrivere la (\ref{eq:imp_delta}), giustificando qui, per
+  correttezza, la mia scelta.
+\end{observazione}
+\section{ La quadridensit\`a di corrente}
+Abbiamo gi\`a definito prima la quadridensit\`a di corrente in termini
+di $c\rho$ e $\bef{j}$, grandezze che, alla luce dell'introduzione
+della $\delta$ di Dirac possono essere riscritte, se $\bef{z}(x^0)$
+rappresenta un moto parametrizzato dal tempo, in tale maniera
+$$
+c\rho (\bef{x},x^0)= e \, c \, \delta^{(3)}(\bef{x-z(x^0)}),
+$$
+$$
+\bef{j} (\bef{x},x^0) = e\,c \frac{\de \bef{z}}{\de x^0}
+\delta^{(3)}(\bef{x-z(x^0)}) = \rho (\bef{x},x^0) \bef{v};
+$$
+dunque
+$$
+j^{\mu} = (c\rho,\bef{v} \rho) = e\,c \frac{\de z^{\mu}}{\de x^0}
+\delta^{(3)}(\bef{x-z(x^0)}) = \rho \frac{\de z^{\mu}}{\de x^0}
+$$
+se $z^{\mu}(x^0) = (x^0 , \bef{z}(x^0))$; a questo punto \`e anche
+possibile scrivere
+\begin{equation}
+  j^{\mu} = e\,c\int_{-\infty}^{+\infty} \de s \,\frac{\de
+    z^{\mu}}{\de s} \delta^{(4)}(x-z(s)), \label{eq:quadricorrente}
+\end{equation}
+dove $s$ \`e il parametro per il moto $z^{\mu}$; si pu\`o subito
+controllare che la (\ref{eq:quadricorrente}) \`e consistente con le
+definizioni date sinora; infatti:
+$$
+j^{i} = e\,c \int_{-\infty}^{+\infty} \de s \,\frac{\de z^{i}}{\de s}
+\delta^{(3)}(\bef{x-z}(z^0))\delta(x^0 - z^0),
+$$
+dove $\delta(x^0 - z^0)$ ci fa valutare la nostra espressione in $z^0
+= x^0$, che porge:
+$$
+j^{i} = e\,c \frac{\de z^i}{\de x^0}\delta^{(3)}(\bef{x-z}(x^0)),
+$$
+come si voleva; invece
+$$
+j^{0} = e\,c \int_{-\infty}^{+\infty} \de z^0
+\delta^{(3)}(\bef{x-z}(z^0))\delta(x^0 - z^0) =
+c\,e\,\delta^{(3)}(\bef{x-z}(x^0)).
+$$
+
+Ci vogliamo ora chiedere se $j^{\mu}$ sia un quadrivettore. Ci\`o \`e
+assicurato dalla seguente
+\begin{proposizione}
+  $j^{\mu}(x)$ \`e un quadrivettore.
+\end{proposizione}
+\begin{dimostrazione}
+  Per la dimostrazione abbiamo bisogno del seguente
+  \begin{lemma}
+    $\delta^{(4)}(Mx)=\delta^{(4)}(x)/|\det M|$, dove $M$ \`e una
+    matrice $4 \times 4$.
+  \end{lemma}
+  \begin{dimostrazione}
+    Dimostriamolo nel caso unidimensionale, e poi estendiamo il
+    ragionamento a quattro dimensioni (senza dimostrazione). Sia $c
+    \neq 0$; $\delta(cx) = \int \delta (cx) \varphi(x) \, \de x$:
+    poniamo $cx=y$, in modo tale che l'integrale diviene
+$$
+\int \frac{1}{|c|}\,\delta(y)\,\varphi(\frac{y}{c})\,\de y =
+\frac{1}{|c|}\varphi(0) = \frac{1}{|c|} <\delta,\varphi>.
+$$
+\end{dimostrazione}
+Tornando alla nostra dimostrazione, se $j^{\mu}$ \`e un quadrivettore,
+allora:
+$$
+j^{'\mu} = \la^{\mu}{}_{\nu}j^{\nu},\,\rem{x}'=\la \rem{x} \quad
+\mbox{ con } \la \in \mt{L}_{+}^{\uparrow}.
+$$
+Vediamo se \`e vero.
+\begin{eqnarray*}
+  j^{'\mu} & = &  c\,e\int_{-\infty}^{+\infty} \de s \,\frac{\de
+    z^{'\mu}}{\de s} \delta^{(4)}(x'-z'(s))\\
+  & = & c\,e \int_{-\infty}^{+\infty} \de s \, \la^{\mu}{}_{\nu}
+  \frac{\de
+    z^{\nu}}{\de s} \delta^{(4)}(\la(x-z(s)))\\
+  & = & c \, e \, \frac{\la^{\mu}{}_{\nu}}{|\det
+    \la|}\int_{-\infty}^{+\infty} \de s \, \frac{\de z^{\nu}}{\de s}
+  \delta^{(4)}(x-z(s))\\
+  & = & \la^{\mu}{}_{\nu} \, c \, e \, \int_{-\infty}^{+\infty} \de
+  s
+  \, \frac{\de z^{\nu}}{\de s} \delta^{(4)}(x-z(s))\\
+  & = & \la^{\mu}{}_{\nu} j^{\nu},
+\end{eqnarray*}
+come si richiedeva.
+\end{dimostrazione}
+
+
+
+Viene ora spontaneo chiedersi se anche dalla (\ref{eq:quadricorrente})
+esce l'equazione di continuit\`a. La risposta viene dalla seguente
+\begin{proposizione}
+  $\partial_{\mu}j^{\mu} = 0$
+\end{proposizione}
+\begin{dimostrazione}
+  Se $\partial_{\mu}j^{\mu} = 0$, integrando deve valere:
+  \begin{equation}
+    \int \de^4 x \varphi(x) \partial_{\mu}j^{\mu}(x) = 0
+    \label{eq:continuitauno}
+  \end{equation}
+  per ogni $\varphi$ che posso scegliere tra quelle $\mt{C}^{\infty}$,
+  e tali che siano a supporto compatto. Devo dunque mostrare che la
+  validit\`a della (\ref{eq:continuitauno}); integrando per parti
+  ottengo
+$$
+-\int \de^4 x j^{\mu}(x) \, \partial_{\mu}\varphi(x).
+$$
+Sostituendo $j^{\mu}$
+\begin{eqnarray*}
+  -\int \de^4 x  \int_{-\infty}^{+\infty} \de s \frac{\de
+    z^{\mu}}{\de s} \delta^{(4)}(x-z(s))
+  \partial_{\mu}\varphi(x)
+  & = & \\
+  -\int_{-\infty}^{+\infty} \int \de^4 x\, \,\delta^{(4)}(x-z(s))\,
+  \frac{\partial \varphi(x)}{\partial x^{\mu}} \de s \frac{\de
+    z^{\mu}}{\de s} & = & \\
+  -\int_{-\infty}^{+\infty} \frac{\partial\varphi(s)}{\partial
+    z^{\mu}}\, \de s \frac{\de z^{\mu}}{\de s} & = & \\
+  -\int_{-\infty}^{+\infty} \de s \frac{\de \varphi(s)}{\de s}
+  & = & \\
+  -\left[ \varphi(z)\right]_{z=-\infty}^{z=+\infty};
+\end{eqnarray*}
+l'ultimo termine va a 0 tuttavia, poich\`e $\varphi$ \`e a supporto
+compatto, e possiamo cos\`i concludere.
+\end{dimostrazione}
+
+
+\section{ Moti di particelle}
+Ci proponiamo in questa sezione, tramite due esempi, di studiare il
+moto di particelle elementari immerse in campo elettrico e
+magnetico. Indicheremo con $\mt{E}$ l'energia, e con $E$ il campo
+elettrico.
+
+\begin{esempio}
+  Consideriamo una particella immersa in un campo magnetico costante,
+  in assenza di campo elettrico, e sia $c = 1$. Le equazioni che
+  regolano il moto della particella sono:
+  \begin{equation}
+    \frac{\de \bef{p}}{\de t} = \frac{e}{c} \bef{v \times B}
+    \label{eq:lorentzesempio}
+  \end{equation}
+$$
+\frac{\de \mt{E}}{\de t} = e \bef{E \cdot v} \stackrel{\bef{E}=0}{=}
+0;
+$$
+dall'ultima vediamo che l'energia si conserva, essendo la sua derivata
+rispetto al tempo nulla; consideriamo che:
+\begin{equation}
+  \bef{v} = \frac{\bef{p}}{\mt{E}};
+\end{equation}
+sostituendo tale equazione nella (\ref{eq:lorentzesempio}) otteniamo:
+\begin{equation}
+  \mt{E}\frac{\de \bef{v}}{\de t} = \frac{e}{c}\bef{v \times B};
+  \label{eq:lorenzesempiouno}
+\end{equation}
+da questa vedo che $\bef{|v|}$ \`e costante; difatti, moltiplicando
+membro a membro per $\bef{v}$
+\begin{eqnarray*}
+  \bef{v}\mt{E}\frac{\de \bef{v}}{\de t} & = &
+  \frac{e}{c}\bef{v\cdot (v \times B)}\\
+  & \mbox{da cui} & \\
+  \frac{\mt{E}}{2} \frac{\de \bef{v^2}}{\de t} & = & 0;
+\end{eqnarray*}
+scegliamo ora gli assi in modo che il campo magnetico sia parallelo
+all'asse $z$. Essendo $\bef{B} = (0,0,B)$, dalla
+(\ref{eq:lorenzesempiouno}) discende:
+$$
+\dot{v}_x = \frac{e B}{\mt{E}}v_y,
+$$
+$$
+\dot{v}_y = -\frac{e B}{\mt{E}}v_x,
+$$
+$$
+\dot{v}_z = 0;
+$$
+per risolver\`o usiamo il metodo suggerito in~\cite{gdmdue}, capitolo
+11, il quale propone, nel caso si abbia il sistema
+$$
+\left\{
+  \begin{array}{ccc}
+    \dot{x} & = & a_t x - b_t y + \alpha_t \\
+    \dot{y} & = & b_t x + a_t y + \beta_t,
+  \end{array}
+\right.
+$$
+dove $a,\,b,\,\alpha,\,\beta$ sono funzioni continue su un certo
+intervallo $I$, e a valori in $\mathbb{R}$, e dove il pedice $t$
+indica la dipendenza dal parametro $t\in I$, di porre $z = x + i y,
+c_t = a_t + i b_t, \gamma_t = \alpha_t + i \beta_t $, in maniera tale
+da ricondursi a
+$$
+\dot{z} = c_t z + \gamma_t;
+$$
+perci\`o per le nostre equazioni la soluzione \`e:
+$$
+v = v(0) e^{-i\omega t},
+$$
+dove $v = v_x + i\, v_y$ e $\omega = e B / \mt{E}$; dunque:
+$$
+v = v_0 e^{-i\alpha}e^{-i\omega t},
+$$
+e
+$$
+\frac{\de x}{\de t} = v_x(t) = v_0 \cos(\omega t - \alpha),
+$$
+$$
+\frac{\de y}{\de t} = v_y(t) = v_0 \sin(\omega t + \alpha).
+$$
+Da queste e dall'equazione su $v_z(t)$
+\begin{equation}
+  x - k_1 = \frac{v_0}{\omega} \sin(\omega t - \alpha),
+  \label{eq:kappa1}
+\end{equation}
+\begin{equation}
+  y - k_2 = \frac{v_0}{\omega} \cos(\omega t + \alpha),
+  \label{eq:kappa2}
+\end{equation}
+$$
+z = z_0 + v_{0z}t,
+$$
+dove $k_1,\,k_2$ sono costanti da determinare a seconda delle
+condizioni iniziali; osserviamo che quadrando e sommando la
+(\ref{eq:kappa1}) e la (\ref{eq:kappa1}) si ottiene l'equazione di una
+circonferenza di raggio $v_0/\omega$ e centro $(k_1,k_2)$, ovvero:
+$$
+(x - k_1)^2 + (y - k_2)^2 = \frac{v_0^2}{\omega^2}.
+$$
+\end{esempio}
+
+\begin{esempio}
+  Consideriamo una particella immersa in un campo elettrico costante,
+  in assenza di campo magnetico, e sia $c = 1$. Le equazioni che
+  regolano il moto della particella sono:
+$$
+\frac{\de \bef{p}}{\de t} = e \bef{E},
+$$
+con $\bef{p}$ impulso relativistico. Scelgo l'asse delle $x$ in modo
+che $\bef{E}=(E,0,0)$, e l'asse delle $y$ in modo che $\bef{p}(o)$ ed
+$\bef{E}$ stiano sul piano formato da $x$ e $y$.  Ho dunque:
+$$
+\begin{array}{ccc}
+  p_x(0) = p_{0x} & p_y(0) = p_{0y} & p_z(0) = 0,\\
+  % & \stackrel{\mbox{ }}{\mbox{}} & \\
+  \dot{p}_x = e E & \dot{p}_y = 0 & \dot{p}_z = 0 \\
+  & \Longrightarrow & \\
+  p_x= e E t + p_{0x} & p_y = p_{0y} & p_z = p_{0z} = 0;
+\end{array}
+$$
+scelgo ora l'origine dei tempi in modo che $p_{0x} = 0$ (posso sempre
+farlo, basta prendere $t' = t + p_{0x}/(e E)$); in tal modo
+$$
+p_x = e E t;
+$$
+per ottenere la velocit\`a
+$$
+\bef{v} = \frac{\bef{p}}{\mt{E}},
+$$
+dove
+$$
+\mt{E} = \sqrt{m^2 + \bef{p}^2} = \sqrt{m^2 + p_{0y}^2 + (e E t)^2}
+\stackrel{\mt{E}_0^2 = m^2 + p_{0y}^2}{=} \sqrt{\mt{E}_0^2 + (e E
+  t)^2},
+$$
+da cui:
+$$
+\bef{v} = \frac{\bef{p}}{\mt{E}} = \left( \frac{e E
+    t}{\sqrt{\mt{E}_0^2 + (e E t)^2}}, \frac{p_{0y}}{\sqrt{\mt{E}_0^2
+      + (e E t)^2}}, 0\right).
+$$
+Osservo che:
+$$
+\frac{e E t}{\sqrt{\mt{E}_0^2 + (e E t)^2}} = \frac{1}{e E}
+\frac{\de}{\de t}\sqrt{\mt{E}_0^2 + (e E t)^2},
+$$
+e questo mi permette di scrivere:
+$$
+\frac{\de x}{\de t} = \frac{1}{e E} \frac{\de}{\de t}\sqrt{\mt{E}_0^2
+  + (e E t)^2};
+$$
+allora
+$$
+x - x_0 = \frac{1}{e E}\left( \sqrt{\mt{E}_0^2 + (e E t)^2} -
+  \mt{E}_0\right);
+$$
+invece
+$$
+\frac{\de y}{\de t} = \frac{p_{0y}}{\sqrt{\mt{E}_0^2 + (e E t)^2}} =
+\frac{p_{0y}}{e E} \frac{\de}{\de t} \asinh\left( \frac{e E
+    t}{\mt{E}_0}\right),
+$$
+dalla quale
+$$
+y - y_0 = \frac{p_{0y}}{e E} \asinh\left( \frac{e E
+    t}{\mt{E}_0}\right);
+$$
+facciamo notare che la forza relativistica non \`e parallela alla
+velocit\`a, dunque anche lungo $y$ ce n'\`e.
+
+Per trovare la traiettoria poniamo
+$$
+\alpha = (y - y_0) \frac{e E}{p_{0y}},
+$$
+in modo da poter scrivere
+\begin{equation}
+  \sinh \alpha = \frac{e E t}{\mt{E}_0}. \label{eq:traiettoriae}
+\end{equation}
+Allora:
+\begin{eqnarray*}
+  e E (x - x_0) &\stackrel{\cosh \alpha \mbox{ per
+      (\ref{eq:traiettoriae})}}{=}& \mt{E}_0 \left(\sqrt{ 1 +
+      \left(\frac{e E t}{\mt{E}_0}\right)}\right) \\ & = & \mt{E}_0
+  (\cosh \alpha - 1)  \\ & = & \mt{E}_0 (\cosh (y - y_0  \frac{e
+    E}{p_{0y}}) - 1),
+\end{eqnarray*}
+e questa \`e la traiettoria; il limite non relativistico \`e quello
+dove la traiettoria \`e una parabola; infatti per $c \rightarrow
+\infty$:
+$$
+\alpha \rightarrow 0
+$$
+(dacch\'e al denominatore di $\alpha$ vi \`e $c$, se esso \`e diverso
+da 1), e
+$$
+\cosh \alpha \rightarrow 1 + \frac{\alpha^2}{2},
+$$
+che porta a
+$$
+e E (x- x_0) \approx \mt{E}_0 \frac{1}{2} \left[ \frac{(y - y_0) e
+    E}{p_{0y} c } \right]^2;
+$$
+nel limite $c \rightarrow \infty$, $\mt{E}_0 \approx mc^2$, $p_{0y}
+\approx m v_0$, e
+$$
+(x- x_0) \approx \frac{1}{2} \frac{e E}{m v_0^2}(y - y_0)^2,
+$$
+che \`e proprio l'equazione di una parabola.
+\end{esempio}
+
+
+
+
+
+
+
+
+
+
+%

@@ -1,0 +1,99 @@
+\section{Il problema dell'etere}
+Il processo che port\`o alla relativit\`a ristretta fu lungo e per nulla
+lineare. Uno dei punti chiave che permise di arrivarvi fu l'abbandono
+dell'idea dell'etere, il mezzo nel quale le onde (luminose ed
+elettromagnetiche) dovevano vibrare per potersi propagare. Si
+ipotizz\`o dunque l'esistenza di due tipi di etere: quello luminifero, e
+quello elettromagnetico.
+
+Per una prima svolta si dovette aspettare il 1856, quando Weber e
+Kohlrausch misurarono la velocit\`a delle onde elettromagnetiche, ossia
+\begin{equation}
+ c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}} = 3 \cdot 10^8 m / s,
+\end{equation}
+uguale dunque alla velocit\`a della luce nel vuoto: onde
+elettromagnetiche e luce dovevano esser lo stesso fenomeno; da ci\`o si
+dedusse l'esistenza di un solo etere, sul quale tuttavia non si sapeva
+niente se non che esso era soggetto alle equazioni di Maxwell (il quale
+elabor\`o una complicata quanta infruttuosa teoria dell'etere per mezzo
+di modelli meccanici).
+
+Seguirono, numerose, fantasiose modellizzazioni, che per\`o non si
+affermarono mai e per il loro grado di complicazione, e perch\'e non
+prevedevano adeguatamente i fenomeni; si dovr\`a aspettare Heinrich
+Hertz, il quale abbandon\`o la pretesa di spiegare l'etere in s\'e
+stesso, per dedicarsi al solo studio dei fenomeni ad esso correlati: per
+quanto riguarda lo stato dell'etere, egli si interessa solo alle due
+grandezze vettoriali che lo descrivono: il campo elettrico $\bef{E}$, ed
+il campo magnetico $\bef{B}$. 
+
+Tuttavia, durante l'elaborazione di queste teorie, un esperimento, ad
+opera di Michelson e Morley, minava alle fondamenta l'esistenza stessa
+dell'etere, dacch\'e non rilevava alcun moto relativo (fino al secondo
+ordine di $v / c$) della terra rispetto ad esso: la velocit\`a della
+luce non subiva dunque alcuna influenza a causa del moto terrestre
+
+Questa poteva avere due spiegazioni:
+ \begin{enumerate}
+  \item L'etere \`e completamente trascinato dal moto della
+	terra. 
+  \item Ogni corpo in movimento contrae il proprio lato parallelo alla
+	velocit\`a di un fattore $(1-v^{2}/c^{2})^{0.5}$. 
+ \end{enumerate}
+La prima ipotesi fu avanzata da Stokes, ma si era rivelata inaccettabile
+poich\'e portava, nei suoi sviluppi formali, a delle contraddizioni non
+accettabili.  
+\newline 
+
+La seconda ipotesi invece fu avanzata da FitzGerald~\cite{fitz}, un
+fisico irlandese, nel 1889, il quale fu ripreso da Lorentz, nel 1895,
+che non solo propose la contrazione delle lunghezze, ma anche la
+dilatazione dei tempi (vedi~\cite{loris1895}), poich\'e in questo modo
+si poteva spiegare il fallimento dell'esperimento e, allo stesso tempo, anche
+introdurre delle trasformazioni (denominate, da \poin, di Lorentz) sotto
+le quali era assicurata la covarianza delle equazioni di
+Maxwell.
+
+Le trasformazioni proposte per coordinate spaziali e temporali tra
+$(x,y,z,t)$ e $ (x',y',z',t')$, in moto con velocit\`a relativa
+$v$ sono\footnote{La forma in cui le riportiamo non \`e quella proposta da
+Lorentz, ma da \poin.}
+\begin{equation}
+	\left\{
+		\begin{array}{rcl}
+			x' & = & \gamma (x - v t)  \\
+			y' & = & y \\
+			z' & = & z \\
+			t' & = & \gamma (t - v x / c^{2})
+		\end{array}
+	\right.
+\label{eq:tloris}
+\end{equation}
+dove $\gamma = (1 - v^{2}/c^{2})^{0.5}$. Facciamo notare che le
+trasformazioni da noi scritte presentano la costante $c$, ossia la
+velocit\`a della luce nel vuoto. Il perch\'e $c$ comparisse era legato
+al fatto che in tal modo le cose funzionavano: non c'era nessuna
+assunzione teorica alla sua base.
+
+Lorentz, d'altronde, necessitava di quest'assunzione, poich\'e nel 1892,
+in~\cite{loris1892}, aveva affermato che  
+\begin{quotation}
+ L'etere \`e a riposo nello spazio assoluto,
+\end{quotation} 
+e questo implicava che esso fosse un sistema di riferimento assoluto, in
+cui valevano le equazioni di Maxwell: da qui la necessit\`a
+dell'assunzione precedente.
+
+Sorge ora spontanea una domanda: perch\'e se due osservatori in sistemi
+di riferimento diversi possono affermare di trovarsi entrambi fermi
+nell'etere (dacch\'e in virt\`u delle trasformazioni di Lorentz le leggi
+dell'elettromagnetismo sarebbero state le stesse rispetto al sistema di
+quest'ultimo), mentre entrambi si muovono rispetto ad esso, \`e ancora
+necessario questo concetto di ``etere''? 
+\newline
+Probabilmente la risposta \`e insita nel fatto che non si riusciva ad
+immaginare come un'onda riuscisse a propagarsi in assenza di un mezzo in
+cui vibrare: quindi Lorentz, e molti altri con lui, continu\`o a credere
+in questo sistema ``introvabile'' (dacch\'e da nessun
+esperimento si sarebbe riusciti a capire la propria presenza o meno in
+esso).  

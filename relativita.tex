@@ -1,0 +1,54 @@
+\documentclass[a4paper,twoside,notoccite,tight,10pt]{report}
+\usepackage{giuditta}
+\usepackage[dvips]{graphicx}
+\usepackage[undotted]{minitoc}
+\usepackage{psfrag}
+\usepackage[big]{layaureo}
+\usepackage[bottom]{footmisc}
+\usepackage[dvips]{hyperref}
+
+\hypersetup{colorlinks=true,%
+linkcolor=blue}
+\hypersetup{pdftitle=Dispense di Relativita'}
+\hypersetup{pdfauthor=Giovanni Lanzani}
+
+\graphicspath{{./figure/}}
+\mtcselectlanguage{italian}
+\makeindex
+\addtolength{\voffset}{1cm}
+\setcounter{minitocdepth}{2}
+\mtcsetfont{minitoc}{*}{\footnotesize\rmfamily\upshape\mdseries}
+\mtcsetfont{minitoc}{section}{\footnotesize\rmfamily\upshape\bfseries}
+%\includeonly{notestoriche}
+\begin{document}
+\dominitoc
+\adjustmtc
+\nocite{barone,marchetti,bettini}
+\newcommand{\la}{\ensuremath{\Lambda}}
+\newcommand{\f}{\ensuremath{F^{\mu\nu}}}
+\newcommand{\ff}[2]{\ensuremath{\partial^{#1}A^{#2} - \partial^{#2}A^{#1}}}
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\sq}{\sqrt{1-\frac{v^{2}}{c^{2}}}}
+\newcommand{\cem}{\ensuremath{\mt{H}_{\rem{cm}}}}
+\newcommand{\lab}{\ensuremath{\mt{H}_{\rem{lab}}}}
+\setlength{\unitlength}{1mm}
+\selectlanguage{italian}
+\include{introduction}
+\tableofcontents
+\part{Il corso}
+\include{asoshortintroduction}
+\include{notestoriche}
+\include{relativitaeinsteniana}
+\include{formulazionegeometrica}
+\include{meccanicarelativistica}
+\include{elettromagnetismo}
+\part{La tesi}
+\include{./file/michelson}
+\include{./file/poin}
+\include{./file/ein}
+\include{./file/diff}
+\bibliografia{relativita}
+\indiceanalitico
+\selectlanguage{english}
+\include{fdl}
+\end{document}

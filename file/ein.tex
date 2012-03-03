@@ -1,0 +1,269 @@
+%#!latex tesi.tex
+\chapter{\ein \label{sez_ein}}
+\minitoc
+In questa sezione percorreremo una parte dell'articolo~\cite{alberto}
+sulla relativit\`a, che tanto rese famoso \ein. Ne analizzeremo solo
+le parti utili al nostro scopo.
+
+Il punto di partenza di Einstein furono le asimmetrie presenti nella
+teoria di Maxwell sotto le trasformazioni di Galileo: egli non si
+capacitava del fatto che le equazioni non valessero pi\`u passando da un
+sistema di riferimento inerziale ad un altro. Questo, assieme ai
+risultati negativi dell'esperimento di Michelson e Morley, lo port\`o ad
+asserire che era impossibile parlare di un sistema di riferimento
+assoluto, e quindi di etere. Quindi enunci\`o il
+%Infatti egli scrive
+%\begin{citaz}
+%  \`E risaputo che l'elettrodinamica di Maxwell, applicata a corpi in
+%  movimento, porta ad asimmetrie che sembrano non centrare col
+%  fenomeno.
+%\end{citaz}
+%\begin{citaz}
+%  Esempi di questo genere, e l'impossibilit\`a di trovare il moto
+%  della terra rispetto all'etere\footnote{Che egli chiama, in questo
+%    contesto, ``light medium''.} suggeriscono che i
+%  \underline{fenomeni elettrodinamici e meccanici} non possiedono
+%  propriet\`a relative a sistemi di riferimento assoluto. Ci\`o porta
+%  al
+%\end{citaz}
+\begin{principio}[di relativit\`a di \ein]
+  Le stesse leggi dell'elettrodinamica e dell'ottica sono valide per
+  tutti i sistemi di riferimento per i quali le equazioni della
+  meccanica valgono.
+\end{principio}
+\begin{observazione}
+  Il principio appena formulato sembrerebbe lasciar intendere che \ein{}
+  ritenesse covarianti le sole leggi dell'elettromagnetismo, in quanto
+  nel principio sono menzionate solo le leggi dell'elettromagnetismo e
+  dell'ottica. Tuttavia non \`e cos\`i: egli vuole estendere il proprio
+  principio a tutti i sistemi di riferimento inerziale, e assume
+  implicitamente per buono il principio di relativit\`a galileiano (per
+  il quale le leggi della meccanica hanno la stessa forma in tutti i
+  sistemi di riferimento). Nell'ultima parte del suo articolo infatti fa
+  sempre riferimento alla stessa legge della meccanica ($F = ma$), per
+  entrambi i sistemi di riferimento che considera, cosa che non sarebbe
+  vera se non assumesse che esse hanno la stessa forma. Se ci\`o non
+  bastasse, il lettore potr\`a convincersi leggendo la
+  sezione~\ref{relativita}.
+\end{observazione}
+%
+%\begin{citaz}
+%  [\ldots] Introdurremo poi un altro postulato, che \`e solo
+%  apparentemente in contraddizione con il precedente, ossia che la la
+%  luce si propaga nel vuoto con una velocit\`a definita, $c$,
+%  indipendente dallo stato di moto del corpo che la emette.
+%\end{citaz}
+
+Successivamente \ein, nel suo articolo, pose la velocit\`a della luce
+costante, e tratt\`o il concetto di simultaneit\`a e sincronizzazione:
+chiariamo cosa intende \ein{} con tali termini. Sia dato un orologio nel
+punto $A$, ed un orologio nel punto $B$, non in moto relativo tra loro,
+e tali da scandire il tempo allo stesso modo. Essi si dicono sincroni
+se, detto $\Delta t$ l'offset tra i due orologi, e detto $t_{A}$
+l'istante in cui $A$ rileva l'avvenimento di un certo evento $\iota$,
+allora $B$ rileva che un evento simultaneo a $\iota$, chiamamolo
+$\iota'$, ha luogo all'istante $t_{A} + \Delta t$. Questo deve valere di
+ogni evento $\iota$.
+
+Ma cosa vuol dire che due eventi sono simultanei? Che essi sono
+raggiunti da un raggio di luce emesso da una sorgente posta a met\`a
+strada tra di loro, al medesimo istante. Tuttavia la definizione non \`e
+per niente comoda, e conviene trovarne una pi\`u adatta per il concetto
+di sincronizzazione, e, a detto di molti, \ein{} \emph{s'ispira} alla
+definizione di Poincar\'e data in~\cite{carro3}.
+
+Si prendano due osservatori, in $A$ e in $B$, solidali ad un certo
+sistema di riferimento, e in corrispondenza ad essi si pongano due
+orologi, uguali tra di loro. Si faccia partire da $A$ un raggio di luce,
+al suo tempo $t_A$; tale raggio arrivi in $B$ al suo tempo $t_B$, e
+ritorni in $A$ al tempo, di $A$, $t_A'$. I due orologi saranno sincroni se
+%\begin{citaz}
+%  Facciamo partire un raggio di luce, al ``tempo di $A$'' $t_A$, da
+%  $A$ verso $B$. Al ``tempo di $B$'' $t_B$, esso \`e riflesso in $B$
+%  verso $A$, dove \`e recepito al ``tempo di $A$'' $t'_A$. In accordo
+%  con la definizione i due orologi sono sincronizzati se
+%\end{citaz}
+\begin{equation}
+  t_{B} - t_{A} = t_{A}' - t_{B}.  
+  \label{eq:sincroni}
+\end{equation}
+A questo punto \ein{} fa subito notare come orologi sincroni in un
+sistema di riferimento, non lo siano pi\`u in un altro in movimento
+rispetto al primo, dacch\'e la velocit\`a del raggio luminoso
+dev'essere la stessa, per quanto da \ein{} postulato, in entrambi i
+sistemi.
+
+Nel seguito egli passa a ricavarsi le trasformazioni di Lorentz in un
+modo non solo del tutto differente da quello da quello di Lorentz, e da
+quello che potrebbe aver utilizzato \poin\footnote{Da tale dimostrazione
+si sospetta fortemente che \ein{} avesse capito autonomamente questa
+nuova teoria, anche perch\'e la dimostrazione \`e fortemente legata alla
+costanza della velocit\`a della luce, al principio di relativit\`a, e al
+concetto di simultaneit\`a.}, ma anche pi\`u mirato (\poin{} aveva
+fissato un parametro, la velocit\`a della luce, per far tornare le
+cose). Dunque i princ\`ipi che aveva postulato lo
+portarono in maniera naturale alle trasformazioni\footnote{Non successe
+alla maniera di Lorentz, il quale aveva trovato le trasformazioni pi\`u
+per necessit\`a, ossia per spiegare i risultati dell'esperimento di
+Michelson.}, senza dover aggiungere ipotesi \emph{ad hoc} per aggiustare
+le cose a posteriori (com'era abituato a fare Lorentz in questo
+campo). Ripercorriamo dunque la strada da \ein {} seguita.
+
+\section{Le trasformazioni di Lorentz}
+Prendiamo due sistemi di riferimento inerziali, $S$ ed $S'$ con
+coordinate $(x,y,z,t)$ e $(\xi,\eta,\zeta,\tau)$, e con origini,
+rispettivamente, $K$ e $\kappa$. Il sistema $S'$ si muove con velocit\`a
+$v$ (verso destra, per concretizzare) rispetto al primo, in maniera
+tale che gli assi delle $x$ e delle $\xi$ rimangano
+paralleli. Vogliamo determinare le coordinate di $S'$ in funzione di
+quelle di $S$.
+
+A questo scopo osserviamo che un punto fisso di $S'$ si pu\`o mappare
+in un punto fisso di $S$ con la posizione $x' = x - vt $. Cominciamo
+col definire $\tau = \tau (x',y,z,t)$, e prendiamo due orologi
+sincronizzati in $S'$, uno in $\kappa$, ovvero nell'origine, mappato in $0$
+tramite $x-vt$, e l'altro tale che sia mappato in $x'$. La definizione
+di sincronizzazione ci assicura che $\tau_{1} - \tau_{0} = \tau_{2} -
+\tau_{1}$, che, una volta scritta $\tau$ come funzione, porge
+(ricordiamo che la prima coordinata \`e tutta mappata)
+\begin{equation}
+  \frac{1}{2}\left[\tau(0,0,0,t) + \tau(0,0,0,t + \frac{x'}{c-v} + 
+    \frac{x'}{c+v}) \right] =
+  \tau(x',0,0,t + \frac{x'}{c-v});
+\end{equation}
+a questo punto, se $x'$ \`e scelto infinitesimo, possiamo scrivere,
+dopo un paio di passaggi
+\begin{equation}
+  \frac{1}{2} \left( \frac{1}{c-v} + 
+    \frac{1}{c+v} \right) \frac{\partial \tau}{\partial t}
+  = \frac{\partial \tau}{\partial x'} + 
+  \frac{1}{c-v}\frac{\partial \tau}{\partial t}
+\end{equation}
+o
+\begin{equation}
+  \frac{\partial \tau}{\partial x'} + 
+  \frac{v}{c^{2} - v^{2}} \frac{\partial \tau}{\partial t} = 0.
+\end{equation}
+La medesima procedura con un orologio posto in $\kappa$ ed uno posto
+sull'asse delle $y$, porge
+\begin{equation}
+  \frac{1}{2}\left[\tau(0,0,0,t) + \tau(0,0,0,t + 
+    \frac{2y}{\sqrt{c^{2} - v^{2}}} \right] =
+  \tau(0,y,0,t + \frac{y}{\sqrt{c^{2}-v^{2}}}),
+\end{equation}
+da cui $\partial \tau / \partial y = 0$. Analogamente per $z$. Dalla
+linearit\`a di $\tau$
+\begin{equation}
+  \tau = a(v) (t - \frac{v}{c^{2} - v^{2}}x')
+\end{equation}
+dove $a(v)$ \`e una funzione per ora sconosciuta ma tale che $\tau =
+0$ quando $t=0$.
+
+Sapendo ora che un raggio di luce si propaga con la stessa velocit\`a
+in tutti i sistemi, possiamo scriverne la legge oraria per la
+coordinata lungo la quale si propaga. Per concretizzare $\xi = c
+\tau$, se esso \`e emesso per $\tau = 0$, ossia
+\begin{equation}
+  \xi = ac (t - \frac{v}{c^{2} - v^{2}}x').
+  \label{eq:xiti}
+\end{equation}
+E per il sistema $S$ tale raggio segue la legge $x = ct = x' + vt$,
+che porta a
+\begin{equation}
+  t = \frac{x'}{c-v}.
+\end{equation}
+Sostituendo nella~\eqref{eq:xiti}, otteniamo
+\begin{equation}
+  \xi = a \frac{c^{2}}{c^{2} - v^{2}} x'.
+  \label{eq:xi}
+\end{equation}
+In maniera del tutto analoga
+\begin{equation}
+  \eta = c \tau = ac (t - \frac{v}{\sqrt{c^{2} - v^{2}}} x' );
+\end{equation}
+quando $y / \sqrt{(c^{2} - v^{2})} = t$ e $x' = 0$ abbiamo
+\begin{equation}
+  \eta = a \frac{c}{\sqrt{c^{2} - v^{2}}} y
+\end{equation}
+e, senza ripetere tutto
+\begin{equation}
+  \zeta = a \frac{c}{\sqrt{c^{2} - v^{2}}} z.
+\end{equation}
+Se a questo punto sostituiamo $x'$ con $x - vt$, e poniamo $a (v)=
+\varphi (v) \sqrt{1-v^{2}/c^{2}}$ , otteniamo
+\begin{equation}
+  \begin{array}{rcl}
+    \tau & = & \varphi (v) \gamma (t - vx/c^{2})\\
+    \xi   & = & \varphi (v) \gamma (x - vt)\\
+    \eta & = & \varphi (v) y \\
+    \zeta & = & \varphi (v) z		
+  \end{array}
+\end{equation}
+dove $\gamma = 1/\sqrt{1 - v^{2}/c^{2}}$. A questo punto non manca che
+determinare $\varphi (v)$. Con considerazioni analoghe a quelle di
+\poin, anche \ein{} trova che $\varphi(v) = 1$. Non riportiamo la
+dimostrazione per brevit\`a, e per non annoiare il lettore.
+
+\section{Composizione delle velocit\`a ed equazioni di Maxwell}
+Proseguendo \ein{} trova il teorema di composizione delle velocit\`a (la
+cui forma \`e uguale a quella dell'equazione~\eqref{eq:vel}),
+e dimostra, in maniera differente da quella di \poin, ma di scarso
+interesse per noi, che con queste trasformazioni le equazioni di
+Maxwell rispettano il principio di relativit\`a\footnote{Di scarso
+  interesse perch\'e una volta trovate le trasformazioni, ci sono
+  molti modi, tutti ugualmente corretti e non troppo difficili, di
+  provare la covarianza delle equazioni.}. Ci risparmiamo dunque di
+riportare questa parte di articolo.
+
+\section{Significato fisico delle trasformazioni di Lorentz}
+Tuttavia \ein, prima del teorema di composizione delle velocit\`a e
+delle equazioni di Maxwell, scrive un paragrafo sul significato fisico
+delle trasformazioni appena trovate, per spiegare come influiscono sui
+corpi e sugli orologi in movimento. In questo paragrafo spiega come, in
+conseguenza delle trasformazioni di Lorentz, la lunghezza di un corpo
+rigido si contragga; fa notare che tale fenomeno \`e reciproco. Per
+quanto riguarda i tempi, invece, \ein{} \`e meno chiaro, perch\'e non
+esplicita la reciprocit\`a della dilatazione degli intervalli
+temporali. Vediamo in dettaglio come procede.
+
+Per prima cosa prendiamo una sfera, rigida\footnote{Approssimativamente
+rigida: non esistono, infatti, in relativit\`a ristretta, corpi
+rigidi.}, di raggio $R$, ferma nel sistema $S'$ (i due sistemi sono gli
+stessi di prima). Il luogo dei suoi punti potr\`a scriversi come
+\begin{equation}
+  \xi^{2} + \eta^{2} + \zeta^{2} = R^{2},
+\end{equation}
+ovvero, in $S$
+\begin{equation}
+  x^{2} \gamma^{2} + y^{2} + z^{2} = R^{2};
+\end{equation}
+dunque in $S$ la sfera di $S'$ \`e vista come un ellissoide di assi 
+$R / \gamma,\, R,\, R$: essa \`e dunque vista contratta; ma non solo
+viene vista: essa \`e contratta a tutti gli effetti per il sistema
+fermo, e la cosa \`e reciproca.
+
+Per quanto riguarda i tempi prendiamo un orologio che in $S$
+misurerebbe il tempo $t$, mentre in $S'$ misura il tempo $\tau$, e
+domandiamoci che relazione intercorre tra i due tempi, una volta che
+tale orologio \`e messo in moto assieme al sistema $S'$.
+
+Dalle trasformazioni di Lorentz
+\begin{equation}
+  \tau = \gamma (t - v x /c^{2}) \stackrel{x = vt}{=} 
+  \gamma t (1 - v^{2}/c^{2}) = t / \gamma 
+\end{equation}
+e quindi $\tau = t - (1 - \gamma^{-1}) t$: l'orologio perde $(1 -
+\gamma^{-1})$ secondi ogni secondo di $S$.  Successivamente afferma che
+se due orologi in $A$ e $B$, nel medesimo sistema di riferimento, sono
+sincroni, e l'orologio in $A$ comincia a muoversi verso $B$, lungo la
+congiungente, con velocit\`a $v$, una volta arrivato non ha pi\`u la
+stessa sincronizzazione con l'orologio in $B$,\label{err_tempi} in
+quanto \`e rimasto indietro di un tempo $t ( 1 - \gamma^{-1})$, se $t$
+\`e il tempo impiegato per il tragitto. Tuttavia se vediamo questo
+processo secondo il sistema di riferimento dell'orologio inizialmente in
+$A$, \`e l'orologio in $B$ che si avvicina (ma $A$ non \`e
+inerziale). Questo \`e il cosiddetto paradosso dei gemelli; in realt\`a
+non possiamo applicare le trasformazioni di Lorentz poich\'e l'orologio
+subisce un'accelerazione quando parte, e successivamente, per fermarsi,
+subisce una decelerazione. Non \`e quindi per niente chiaro dal testo di
+\ein{} se questo punto fosse stato da lui pienamente compreso.

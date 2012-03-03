@@ -1,0 +1,491 @@
+%#!latex tesi.tex
+\chapter{\poin}
+\minitoc
+Nella sua principale memoria sulla relativit\`a~\cite{carro1}, che
+riassume alcune sue considerazioni sull'argomento, Jules Henry \poin {}
+(1854-1912) viene motivato dall'inconsistenza dei risultati
+dell'esperimento di Michelson e Morley con la teoria fino ad allora
+sviluppata.
+%
+%Infatti
+%leggiamo in~\cite{carro1}:
+%\begin{citaz}
+%  A prima vista sembra che l'aberrazione della luce indichi che la
+%  terra sia in moto assoluto rispetto all'etere. Ma tutti gli
+%  esperimenti, compreso quello di Michelson e Morley, sembrano non
+%  rilevare tale moto.
+%\end{citaz}
+Parte dunque da un risultato fisico, e cerca di darne una spiegazione;
+%continua infatti nella sua memoria esponendo il
+nella memoria espone il
+\begin{principio}[di Relativit\`a di \poin\footnote{Confronta
+    \cite{carro2}}]
+  Le leggi dei fenomeni fisici sono le stesse per tutti i sistemi di
+  riferimento inerziali.  Dunque non esiste mezzo alcuno per stabilire
+  se siamo in moto o meno\footnote{Tuttavia non \`e la prima volta che
+    \poin{} lo espone. Gi\`a in~\cite{carro4} possiamo trovare un
+    intero capitolo dedicato al principio di relativit\`a, sebbene non
+    sia espresso in questa forma.}.
+\end{principio}
+Il suo obiettivo, nella prima parte della memoria, quella interessante
+per i nostri scopi, \`e dimostrare che tramite le trasformazioni di
+Lorentz, da lui emendate, le leggi dell'elettromagnetismo rimangono
+invariate. Egli stesso dice
+\begin{citaz}
+  Queste equazioni [di Maxwell] rimangono invariate se vi si applicano
+  le trasformazioni di Lorentz, e questo spiega perch\'e nessun
+  esperimento \`e in grado di rilevare il moto della terra rispetto
+  all'etere.
+\end{citaz}
+\section{Le trasformazioni di Lorentz}
+Poincar\'e nel suo lavoro non deriva direttamente le trasformazioni di
+Lorentz, bens\`i dice di trovarle (e gli si pu\`o credere, visto che le
+scrive in maniera corretta, al contrario di Lorentz). Mostriamo come, in
+effetti, dall'assunzione dell'omogeneit\`a ed isotropia dello
+spazio, assieme al principio di relativit\`a, e alla richiesta, motivata
+dall'interpretazione fisica, che costituiscano un gruppo, \`e possibile arrivare
+alle trasformazioni nel seguente modo.
+
+ Considereremo le sole coordinate $(x,t)$ e $(x',t')$,
+ come in figura~\vref{fig:traslazione1}.
+ \setlength{\unitlength}{0.7mm}
+ \begin{figure}[h]
+   \begin{center}
+     \begin{picture}(80,15) \put(6,1){$O$} \put(13,2){\vector(1,0){40}}
+       \put(58,1){$x$} \put(0,9){$O'$} \put(7,10){\vector(1,0){40}}
+       \put(52,9){$x'$} \put(65,7){$\frac{\de \overline{OO'}}{\de t} =
+         v$}
+     \end{picture}
+   \end{center}
+   \caption{Il sistema $O'x'$ \`e in moto relativo rispetto al sistema
+     $Ox$, con velocit\`a $v$.}
+   \label{fig:traslazione1}
+ \end{figure}
+ In questo caso ci interesseremo delle trasformazioni $(x,t)
+ \rightarrow (x',t')$, che chiamiamo trasformazioni
+ $\mathcal{A}$. Girando il sistema $O'x'$ di $\pi$, otterremmo la
+ configurazione mostrata in figura~\vref{fig:traslazione2}.
+ \begin{figure}[tb]
+   \begin{center}
+     \begin{picture}(80,15) \put(6,1){$O$} \put(13,2){\vector(1,0){40}}
+       \put(58,1){$x$} \put(0,9){$x'$} \put(47,10){\vector(-1,0){40}}
+       \put(52,9){$O'$} \put(65,7){$\frac{\de \overline{OO'}}{\de t} =
+         -v$}
+     \end{picture}
+   \end{center}
+   \caption{Il sistema $O'x'$ \`e in moto relativo rispetto al sistema
+     $Ox$, con velocit\`a $-v$.}
+   \label{fig:traslazione2}
+ \end{figure}
+ In questo caso prenderemmo in esame le trasformazioni $(x',t')
+ \rightarrow (x,t)$; chiamiamole trasformazioni $\mathcal{B}$.
+
+ L'omogeneit\`a dello spazio e del tempo comporta che $\mathcal{A}$ e
+ $\mathcal{B}$ siano lineari. Poniamo $t=t'=0$ quando $x=x'=0$ per
+ entrambe le trasformazioni, che dunque risultano ($A, \ldots, D'$
+ costanti)
+ \begin{equation}
+   \mathcal{A} \left\{
+     \begin{array}{rcl}
+       x' & = & A x + B t \\
+       t' & = & Cx + Dt
+     \end{array}
+   \right.	
+   \quad
+   \mathcal{B} \left\{
+     \begin{array}{rcl}
+       x & = & A' x' + B' t' \\
+       t & = & C' x' + D' t'.
+     \end{array}
+   \right.
+   \label{eq:loris}
+ \end{equation}
+ Per il principio di relativit\`a, e per la simmetria del problema, si
+ riconosce che deve essere $A=A', \ldots, D=D'$. Inoltre se per
+ $\mathcal{A}$ si prende $x' = 0$ si ha, ricordando che $x = v t$, che
+ $A v + B = 0$. Per la seconda delle $\mathcal{B}$ invece prendiamo
+ sempre l'origine di $O' x'$, e dunque, sostituendo $t = D t'$ nella
+ prima di $\mathcal{B}$, si ottiene (sempre ricordando che $x' = 0$) $D
+ v = B$, da cui $A = -D$. Ora queste relazioni devono valere $\forall
+ \, x',\,t'$, in quanto $A, \ldots, D$ sono costanti. Posso dunque
+ operare una sostituzione nella prima di $\mathcal{B}$, per ottenere
+ \begin{eqnarray}
+   x & = & A x' + B t' \nonumber \\ 
+   & = & A (Ax + Bt) + B (Cx + Dt) \nonumber \\
+   & = & t (AB + BD) + x (A^{2} + BC) \nonumber \\
+   & = & x (D^{2} + CDv)
+ \end{eqnarray}
+ \begin{equation}
+   D^{2} + CDV  =  1 \Longrightarrow
+   C  =  \frac{1-D^{2}}{DV}.
+ \end{equation}
+ Sostituendo i valori ottenuti per $A, \, B$ e $C$ nella $\mathcal{A}$,
+ si ottiene
+ \begin{equation}
+   \left\{
+     \begin{array}{rcl}
+       x' & = & -D x + D vt \\
+       t' & = & \frac{1-D^{2}}{D v} x + D t.
+     \end{array}
+   \right.
+   \label{eq:loris1}
+ \end{equation}
+A questo punto, per trovare i rimanenti parametri incogniti, basta
+comporre due trasformazioni; si giunge alle trasformazioni (i sistemi
+sono posti come in figura~\ref{fig:traslazione1})\footnote{Tali
+trasformazioni presentano il parametro $c$, imposto pari alla velocit\`a
+della luce per il fatto che, in tal modo, le cose ``funzionavano''.}
+\begin{equation}
+  \left\{
+    \begin{array}{rcl}
+      x' & = & l \gamma (x - v t)  \\
+      y' & = & l y \\
+      z' & = & l z \\
+      t'  & = & l \gamma (t - v x / c^{2}),
+    \end{array}
+  \right.
+  \label{eq:lorentzelle}
+\end{equation}
+dove $l = l (\beta)$: per trovarlo imponiamo che le trasformazioni di
+Lorentz formino un gruppo: prendiamo la trasformazione tra due sistemi
+come in figura~\ref{fig:traslazione2}: essa avr\`a la forma 
+\begin{equation}
+  \left\{
+    \begin{array}{rcl}
+      x' & = & l \gamma (x + v t)  \\
+      y' & = & l y \\
+      z' & = & l z \\
+      t'  & = & l \gamma (t + v x / c^{2});
+    \end{array}
+  \right.
+  \label{eq:lorentzvmeno}
+\end{equation}
+d'altronde, se esse formano un gruppo, dovr\`a valere l'inversa
+della~\eqref{eq:lorentzelle}, ossia
+\begin{equation}
+  \left\{
+    \begin{array}{rcl}
+      x' & = &  \gamma (x + v t)/l  \\
+      y' & = & y/l \\
+      z' & = &  z/l \\
+      t'  & = & \gamma (t + v x / c^{2}) /l.
+    \end{array}
+  \right.
+  \label{eq:lorentz_inv}
+\end{equation}
+Allora $l=1/l$, da cui $l=\pm 1$: essendo per\`o $l=1$ per $v=0$, si
+avr\`a sempre $l=1$: da ci\`o le famose trasformazioni.
+%A questo punto per trovare le trasformazioni di Lorentz, basta far
+%notare che esse devono costituire un gruppo: infatti l'unico parametro
+%sconosciuto \`e $D$. Per trovarlo consideriamo il sistema in
+% figura~\vref{fig:traslazione3};
+% \begin{figure}[h]
+%   \begin{center}
+%     \begin{picture}(130,25) \put(6,1){$O$}
+%       \put(13,2){\vector(1,0){40}} \put(58,1){$x$} \put(3,9){$O'$}
+%       \put(10,10){\vector(1,0){40}} \put(55,9){$x'$} \put(0,18){$O''$}
+%       \put(7,19){\vector(1,0){40}} \put(52,18){$x''$}
+%       \put(65,7){$\frac{\de \overline{OO'}}{\de t} = v$}
+%       \put(95,7){$\frac{\de \overline{OO''}}{\de t} = v''$}
+%       \put(125,7){$\frac{\de \overline{O'O''}}{\de t} = v'$}
+%     \end{picture}
+%   \end{center}
+%   \caption{Il sistema $O'x'$ \`e in moto relativo rispetto al sistema
+%     $Ox$, con velocit\`a $v$, il sistema $O''x''$ \`e in moto relativo
+%     rispetto al sistema $Ox$ con velocit\`a $v''$, e con velocit\`a
+%     $v'$ rispetto a $O'x'$.}  \label{fig:traslazione3}
+% \end{figure}
+% la~\eqref{eq:loris1} diventa allora (per l'inversione delle $x'$)
+% \begin{equation}
+%   \left\{
+%     \begin{array}{rcl}
+%       x' & = & D (x - vt) \\
+%       t' & = & \frac{1-D^{2}}{D v} x + D t.
+%     \end{array}
+%   \right.
+%   \label{eq:loris2}
+% \end{equation}
+% Scriviamo ora le trasformazioni per $O''x''$ rispetto a $O'x'$ e $Ox$,
+% ottenendo ($D'$ non \`e quello di~\eqref{eq:loris})
+% \begin{equation}
+%   \mathcal{C}
+%   \left\{
+%     \begin{array}{rcl}
+%       x'' & = & D' (x' - v't') \\
+%       t'' & = & \frac{1-D'^{2}}{D' v'} x' + D' t'.
+%     \end{array}
+%   \right.
+%   \quad
+%   \mathcal{D}
+%   \left\{
+%     \begin{array}{rcl}
+%       x'' & = & D'' (x - v''t) \\
+%       t'' & = & \frac{1-D''^{2}}{D' v''} x + D'' t.
+%     \end{array}
+%   \right.
+%   \label{eq:loris3}
+% \end{equation}
+% Usando la~\eqref{eq:loris2} in $\mathcal{C}$, otteniamo
+% \begin{equation}
+%   \mathcal{D'}
+%   \left\{
+%     \begin{array}{rcl}
+%       x'' & = & \left[ DD' + D' v' \frac{D^{2} -1}{D v} \right] x -DD' (V+V') t \\
+%       t''  & = & \left( \frac{D - DD'^{2}}{D' v'} +
+%         \frac{D' - D'D^{2}}{D v}\right) x
+%       + \left( DD' + Dv \frac{D'^{2} -1}{D'V'}\right) t.
+%     \end{array}
+%   \right.
+%   \label{eq:loris4}
+% \end{equation}
+% Ovviamente $\mathcal{D}$ e $\mathcal{D'}$ devono essere uguali,
+% perci\`o, tra le altre cose, devono valere
+% $$ \left\{
+% 	\begin{array}{l}
+%           D''  =  DD' + D'v' \frac{D^{2} - 1}{D v}\\
+%           D''  =  DD' + Dv \frac{D'^{2} - 1}{D' v}
+% 	\end{array}
+%       \right.  \Rightarrow D'' - D = D' v' \frac{D^{2} - 1}{D v} = Dv
+%       \frac{D'^{2} - 1}{D' v}. \nonumber
+% $$
+% Quest'ultima equazione ci permette di definire la costante $K$,
+% indipendente da $v$
+% \begin{equation}
+%   K = \frac{D^{2} v^{2}}{D^{2}-1} = \frac{D'^{2} v'^{2}}{D'^{2}-1}.
+%   \label{eq:kappa}
+% \end{equation} 
+% Possiamo ora determinare $D$ in funzione di $K$;
+% dalla~\eqref{eq:kappa} avremmo due soluzioni, ma dacch\'e per $v = 0$,
+% $D = 1$ (l'equazione~\eqref{eq:loris2} \`e l'identit\`a), allora, in
+% generale, dovremo scegliere la soluzione positiva:
+% \begin{equation}
+%   D = \frac{1}{\sqrt{1 - v^{2}/K^{2}}}.
+%   \label{eq:di}
+% \end{equation}
+%Con questo metodo del tutto generale possiamo ottenere sia le
+%trasformazioni di Galileo ($K = \infty$), sia le trasformazioni
+%``corrette'' ($K = c^2$). Tuttavia n\'e Lorentz n\'e Poincar\'e
+%avevano sviluppato una teoria dalla quale uscisse in maniera naturale
+%$K = c^2$: la loro scelta fu dettata dalla necessit\`a, in quanto in
+%questa maniera si spiegava l'esperimento di Michelson e Morley, e in
+%particolare \poin {} dimostr\`o che, in tal modo, le equazioni di
+%Maxwell rimangono invariate passando da un sistema di riferimento
+%inerziale all'altro (in accordo con il principio di
+%relativit\`a). Vediamo come.
+
+\section{Le equazioni di Maxwell}
+In questa sezione, volendo riportare il pi\`u fedelmente possibile
+l'articolo~\cite{carro1}, useremo la notazione di Gauss razionalizzata,
+e le unit\`a spaziali e temporali in maniera tale da avere $c =
+1$. Inoltre per le trasformazioni di Lorentz useremo un parametro $l = l
+(\beta)$, che, come abbiamo visto, \poin {} porr\`a pari a 1 per
+garantire le propriet\`a gruppali delle trasformazioni\footnote{\poin{}
+prima affronta questa sezione, e poi dimostra che $l=1$.
+}.
+
+Le equazioni che ci interessano sono ($\bef{u}$ \`e la velocit\`a)
+\begin{equation}
+  \partial \bef{E} / \partial t + \rho \bef{u} = \nabla \times \bef{B}
+  \label{eq:corrente}
+\end{equation}
+\begin{equation}
+  \bef{B} = \nabla \times \bef{A}, \quad \bef{E} = 
+  - \partial \bef{A} / \partial t - \nabla \varphi
+  \label{eq:aephi}
+\end{equation}
+\begin{equation}
+  \partial \bef{B} / \partial t = - \nabla \times \bef{E}
+  \label{eq:bede}
+\end{equation}
+\begin{equation}
+  \partial \rho / \partial t + \nabla \cdot \rho \bef{u} = 0
+  \label{eq:rhoeu}
+\end{equation}
+\begin{equation}
+  \nabla \cdot \bef{E} = \rho
+  \label{eq:rhoede}
+\end{equation}
+\begin{equation}
+  \partial \varphi / \partial t + \nabla \cdot \bef{A} = 0
+  \label{eq:phiea}
+\end{equation}
+\begin{equation}
+  \Box \varphi = - \rho, \quad \Box \bef{A} = - \rho \bef{u}
+  \label{eq:phiaerho}
+\end{equation}
+dove $\Box = \nabla^{2} - \partial^{2} / \partial t^{2}$. Inoltre egli
+prende in considerazione la forza e la densit\`a di forza
+elettromagnetica:
+\begin{equation}
+  \label{eq:forza}
+  \bef{F} = (\bef{E} + \bef{v} \times \bef{B})
+\end{equation}
+\begin{equation}
+  \label{eq:denforza}
+  \bef{f} = \rho (\bef{E} + \bef{v} \times \bef{B}).
+\end{equation}
+
+Cominciamo la nostra trattazione con la legge di trasformazione dei
+volumi. Prendiamo una sfera che si muove, nel sistema di riferimento
+$(x,y,z,t)$ con velocit\`a $\bef{u}$. Il suo volume \`e $4/3 \pi
+r^{3}$. Nel sistema di riferimento $(x',y',z',t')$, solidale alla
+sfera, la sua equazione \`e (usando le trasformazioni) per $t'=0$ (e
+trovato il volume a questo tempo, esso rimane costante)
+\begin{displaymath}
+  \gamma^{2} \left( x_{1}' - \beta u_{1} x_{1}' \right)^{2} + 
+  \sum_{j=2}^{3}\left(x_{j} - \gamma u_{j} \beta x_{1}'\right)^{2} =
+ l^{2} r^{2}. 
+\end{displaymath}
+Con un'integrazione possiamo trovare il volume, che risulta $V' = V
+l^{3} [\gamma(1-\beta u_{1})]$. Dunque $V' / V = l^{3} / [\gamma
+(1-\beta u_{1})]$, da cui, considerando (come assume \poin) che la carica elettrica non
+cambia se cambiamo il sistema di riferimento, e che perci\`o $\rho V =
+\rho' V'$, si ha
+\begin{equation}
+  \rho' = \rho l^{-3} \gamma (1 - \beta u_{1}).
+  \label{eq:rhoprimo}
+\end{equation}
+Enunciamo ora la regola di composizione delle velocit\`a, diretta
+conseguenza delle trasformazioni di Lorentz
+\begin{equation}
+  u_{1}' = (u_{1} - \beta) / (1 - \beta u_{1}), 
+  \quad  
+  u_{j}' = u_{j} / \gamma (1-\beta u_{1}) 
+  \quad 
+  (j=2,3).
+  \label{eq:vel}
+\end{equation}
+Questo ci permette di scrivere
+\begin{displaymath}
+  \rho' u_{1}' = \gamma l^{-3} (u_{1} - \beta) \rho,
+  \quad
+  \rho' u_{j}'  = l^{-3} \rho u_{j},
+  \quad
+  (j=2,3).
+\end{displaymath}
+Tali formule ci torneranno utili pi\`u tardi. Cerchiamo ora di capire
+come trasforma $\Box$. Per comodit\`a indichiamo con $x^{0}$ il tempo
+$t$, e $x^{i}$ le coordinate $x \,(i=1)$, $y \,(i=2)$ e $z \,
+(i=3)$. Le corrispondenti quantit\`a con gli apici saranno indicate
+con le componenti di $y$\footnote{Nella~\eqref{eq:lorentzelle} vi sono
+  le $y$ scritte in funzione delle $x$ }.  Da ci\`o
+
+\begin{eqnarray*}
+  \Box & = & \sum_{1}^{3} \frac{\partial}{\partial x^{i}} \cdot
+  \frac{\partial}{\partial x^{i}} - 
+  \frac{\partial}{\partial x^{0}} \cdot \frac{\partial}{\partial x^{0}}\\
+  & = & \sum_{i=1}^{3}\left[ \sum_{j = 0}^{3} 
+    \left(\frac{\partial y^{j}}{\partial x^{i}} \right)^{2}
+    \frac{\partial}{\partial y^{j}} \cdot 
+    \frac{\partial}{\partial y^{j}}\right] -
+  \sum_{j=0}^{3} \left( \frac{\partial y^{j}}{\partial
+      x^{0}} \right)^{2} 
+  \frac{\partial}{\partial y^{j}} \cdot 
+  \frac{\partial}{\partial y^{j}}\\
+  & \stackrel{\gamma^{2} - \gamma^{2} \beta^{2} = 1}{=} & 
+  l^{2} \left( \sum_{1}^{3} 
+    \frac{\partial}{\partial y^{i}} \cdot 
+    \frac{\partial}{\partial y^{i}} -
+    \frac{\partial}{\partial y^{0}} \cdot 
+    \frac{\partial}{\partial y^{0}} \right);
+\end{eqnarray*}
+allora $\Box = l^{2} \Box' $, da cui $\Box' = l^{-2} \Box$. Per quanto
+riguarda $\varphi$ si ha $\Box' \varphi' = -\rho' $. Usando quanto
+appena trovato e la~\eqref{eq:rhoprimo} con la~\eqref{eq:phiaerho}
+otteniamo
+\begin{eqnarray*}
+  l^{-2} \Box \varphi' & = & 
+  - \gamma l ^{-3} (1 - \beta u_{1}) \rho \Longrightarrow \\
+  \Box \varphi ' & = & 
+  \gamma l^{-1} (1- \beta u_{1}) \Box \varphi \\
+  & = & \gamma l^{-1} (\Box \varphi - \beta \rho u_{1}) \\
+  & = & \gamma l^{-1} \Box (\varphi - 
+  \beta A_{1}) \Longrightarrow \\
+  \varphi' & = & \gamma l^{-1} (\varphi - \beta A_{1}).
+\end{eqnarray*}
+Per $A_{1}'$ si ha $\Box ' A_{1}' = -\rho ' u_{1}'$; allora
+\begin{eqnarray*}
+  \Box A_{1}' & = & 
+  \gamma l^{-1} \left (\rho u_{1} + \beta \rho \right) \\
+  & = & \gamma l^{-1} 
+  \left (\Box A_{1}  -\beta \Box \varphi \right),
+\end{eqnarray*}
+da cui $A_{1}' = \gamma l^{-1} (A_{1} - \beta \varphi)$. Analogamente
+si procede per $A_{2}, A_{3}$, ottenendo
+\begin{displaymath}
+  A_{j}' = l ^{-1} A_{j}.
+\end{displaymath}
+Ora che si \`e capito come procedere, possiamo saltare tutti i
+passaggi intermedi e riportare i risultati per il campo elettrico e
+per il campo magnetico
+\begin{displaymath}
+  \begin{array}{rcl}
+    E_{1}' & = & l^{-2} E_{1} \\
+    E_{2}' & = & \gamma l^{-2} (E_{2} - \beta B_{3}) \\
+    E_{3}' & = & \gamma l^{-2} (E_{3} + \beta B_{3})
+  \end{array}
+  \qquad
+  \begin{array}{rcl}
+    B_{1}' & = & l^{-2} B_{1} \\
+    B_{2}' & = & \gamma l^{-2} (B_{2} + \beta E_{3}) \\
+    B_{3}' & = & \gamma l^{-2} (B_{3} - \beta E_{2}). 
+  \end{array}
+\end{displaymath}
+Le rimanenti dimostrazioni seguono da queste; infatti
+la~\eqref{eq:phiea} segue da~\eqref{eq:phiaerho} e~\eqref{eq:rhoeu}, e
+le equazioni~\eqref{eq:corrente},~\eqref{eq:rhoede} e~\eqref{eq:bede}
+seguono da~\eqref{eq:phiaerho},~\eqref{eq:aephi} e~\eqref{eq:phiea}.
+
+Per quanto riguarda la densit\`a di forza egli trova, correttamente
+\begin{equation}
+  f'_x = \gamma (f_x - \beta \bef{f \cdot v}) /l^5,
+\label{eq:ftrax}
+\end{equation}
+\begin{equation}
+  f'_{y,z} = f_{y,z}/l^5,
+\label{eq:ftrayz}
+\end{equation}
+e in maniera analoga per la forza.
+
+\section{Ulteriori sviluppi}
+Nel suo lavoro, \poin{} non si ferma qua; infatti parlando del
+principio di minima azione e delle trasformazioni di Lorentz, egli
+scopre la relazione
+\begin{equation}
+  \label{eq:primoinv}
+  l^4 [\varepsilon \bef{E}'^2 - \bef{B}'^2/\mu] = [\varepsilon
+  \bef{E}^2 - \bef{B}^2/\mu] 
+\end{equation}
+che, essendo $l=1$, rappresenta un'invariante
+dell'elettromagnetismo. Inoltre, parlando delle onde di Langevin,
+ne trova un altro, e precisamente
+\begin{equation}
+  \label{eq:secondoinv}
+  \bef{E'}\cdot\bef{B'} = \bef{E} \cdot \bef{B}.
+\end{equation}
+
+Nella parte dedicata alle trasformazioni di Lorentz e ai gruppi, egli
+osserva come la forma quadratica
+\begin{equation}
+  \label{eq:ds}
+  x^2 + y^2 + z^2 - t^2
+\end{equation}
+sia invariante sotto le trasformazioni di Lorentz (e questo permetter\`a
+la definizione di una metrica sullo spazio).
+
+Nella settima sezione, dedicata al moto quasi stazionario, \poin{} poi
+trova che, per ogni forza, vale 
+\begin{equation}
+  \bef{F} = \frac{\de \bef{P}}{\de t}, 
+   \mbox{ con } \bef{P} = m_0 v \gamma 
+   \label{eq:forza_rel}
+\end{equation}
+ed \( m_0 \) = massa a riposo. 
+
+Nell'ultima parte, la nona, egli osserva che con la posizione $ t\mapsto
+t i $
+\begin{citaz}
+ le trasformazioni di Lorentz non sono altro che una rotazione dello
+ spazio attorno all'origine, fissa.
+\end{citaz} 
+

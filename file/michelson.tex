@@ -1,0 +1,127 @@
+% #!latex tesi.tex
+\chapter{Il problema dell'etere}
+Il processo che port\`o alla relativit\`a ristretta fu lungo e per
+nulla lineare. Uno dei punti chiave che permise di arrivarvi fu
+l'abbandono dell'idea dell'etere, il mezzo nel quale le onde (luminose
+ed elettromagnetiche) dovevano vibrare per potersi propagare. Si
+ipotizz\`o l'esistenza di due tipi di etere: quello luminifero, e
+quello elettromagnetico.
+
+Per una prima svolta si dovette aspettare il 1856, quando Weber e
+Kohlrausch misurarono la velocit\`a delle onde elettromagnetiche,
+ossia
+\begin{equation}
+  c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}} = 3 \cdot 10^8 m / s,
+\end{equation}
+uguale alla velocit\`a della luce nel vuoto: onde elettromagnetiche e
+luce dovevano esser parte dello stesso fenomeno; da ci\`o si dedusse
+l'esistenza di un solo etere, sul quale tuttavia non si sapeva niente
+se non che esso era soggetto alle equazioni di Maxwell (il quale
+elabor\`o una complicata quanto infruttuosa teoria dello stesso per
+mezzo di modelli meccanici).
+
+Seguirono numerose modellizzazioni, che per\`o non si affermarono mai
+e per il loro grado di complicazione e perch\'e non avevano capacit\`a
+di previsione; si dovr\`a aspettare Heinrich Hertz, il quale
+abbandon\`o la pretesa di spiegare l'etere in s\'e stesso, per
+dedicarsi al solo studio dei fenomeni ad esso correlati: per quanto
+riguarda il suo stato, si interess\`o solo alle due grandezze vettoriali
+che lo descrivevano: il campo elettrico $\bef{E}$, ed il campo magnetico
+$\bef{B}$.
+
+Con l'avvento dell'elettromagnetismo di Maxwell tuttavia, non solo era
+stato dapprima necessario introdurre un nuovo tipo di etere, ma era
+sorto anche il seguente problema: le sue equazioni non erano
+covarianti per le trasformazioni di Galileo. Il problema poteva
+avere principalmente due soluzioni:
+\begin{enumerate}
+\item le equazioni di Maxwell sono valide solo in un particolare
+  sistema di riferimento (e subito si pens\`o all'etere), mentre hanno
+  forma simile per gli altri
+  sistemi di riferimento.
+
+  Tuttavia un esperimento, ad opera di Michelson e Morley, minava alle
+  fondamenta quest'ipotesi, dacch\'e non rilevava alcun moto relativo
+  (fino al secondo ordine di $v / c$) della terra rispetto all'etere: la
+  velocit\`a della luce (che doveva avere modulo pari a $1/(\mu_0
+      \varepsilon_0)^{0.5}$ nei sistemi di
+  riferimento dove valevano le equazioni di Maxwell\footnote{E quindi
+      non sulla terra, ma solo sull'etere; essa risultava un sistema di
+      riferimento diverso in virt\`u del fenomeno dell'aberrazione della
+      luce.}) non subiva alcuna influenza dal moto terrestre.
+
+  Analizzando le equazioni per i tempi di propagazione coinvolti
+  nell'esperimento, questa risultava avere due spiegazioni:
+  \begin{enumerate}
+  \item l'etere \`e completamente trascinato dal moto della terra.
+  \item ogni corpo in movimento contrae il proprio lato parallelo alla
+    velocit\`a di un fattore $\sqrt{(1-v^{2}/c^{2})}$.
+  \end{enumerate}
+  La prima ipotesi fu avanzata da Stokes, ma si rivel\`o inaccettabile
+  poich\'e portava, nei suoi sviluppi formali, a contraddizioni
+  inaccetabili.%  
+  \newline% 
+  La seconda ipotesi fu invece avanzata da
+  FitzGerald~\cite{fitz}, un fisico irlandese, nel 1889, e
+  incredibilmente, si rivel\`o la pi\`u fondata, bench\'e fosse solo un
+  primo passo per la soluzione del problema;
+
+\item le equazioni di Maxwell sono covarianti: non per le
+  trasformazioni di Galileo per\`o, ma per altre, trovate da Lorentz, 
+  il quale riprese (ignorando il lavoro di Fitzgerald) nel 1895 la
+contrazione delle lunghezze, e propose anche la dilatazione dei tempi
+(vedi~\cite{loris1895}), poich\'e in questo modo era possibile non solo
+spiegare il fallimento dell'esperimento ma anche introdurre delle
+trasformazioni (denominate, da \poin, di Lorentz) sotto le quali era
+assicurata la covarianza delle equazioni di Maxwell.
+\end{enumerate}
+
+Le trasformazioni proposte per coordinate spaziali e temporali tra
+$(x,y,z,t)$ e $ (x',y',z',t')$, in moto con velocit\`a relativa $v$
+sono\footnote{La forma in cui le riportiamo non \`e quella proposta da
+  Lorentz, ma da \poin{} nel 1905.}
+\begin{equation}
+  \left\{
+    \begin{array}{rcl}
+      x' & = & \gamma (x - v t)  \\
+      y' & = & y \\
+      z' & = & z \\
+      t' & = & \gamma (t - v x / c^{2})
+    \end{array}
+  \right.
+  \label{eq:tloris}
+\end{equation}
+dove 
+\begin{equation}
+     \gamma = \frac{1}{\sqrt{1 - v^{2}/c^{2}}}.
+\end{equation}
+
+\begin{observazione}
+  Facciamo notare che le trasformazioni da noi scritte presentano la
+  costante $c$, ossia la velocit\`a della luce nel vuoto. Il perch\'e
+  $c$ comparisse era legato al fatto che in tal modo le cose
+  funzionavano: non c'era nessuna assunzione teorica alla base che
+ potesse giustificarlo.
+
+  Lorentz, d'altronde, necessitava di quest'assunzione, poich\'e nel
+  1892, in~\cite{loris1892}, aveva affermato che
+  \begin{quotation}
+    L'etere \`e a riposo nello spazio assoluto,
+  \end{quotation}
+  e questo implicava che esso fosse un sistema di riferimento
+  assoluto, in cui valevano le equazioni di Maxwell: da qui la
+  necessit\`a dell'assunzione precedente.
+\end{observazione}
+
+Sorge ora spontanea una domanda: perch\'e se due osservatori in
+sistemi di riferimento diversi possono affermare di trovarsi entrambi
+fermi nell'etere (dacch\'e in virt\`u delle trasformazioni di Lorentz
+le leggi dell'elettromagnetismo sarebbero state le stesse rispetto al
+sistema ``assoluto''), mentre entrambi si muovono rispetto ad esso,
+\`e ancora necessario questo concetto di ``etere''?  \newline
+Probabilmente la risposta \`e insita nel fatto che non si riusciva ad
+immaginare come un'onda riuscisse a propagarsi in assenza di un mezzo
+in cui vibrare: quindi Lorentz, e molti altri con lui, continu\`o a
+credere in questo sistema ``introvabile'' (poich\'e da nessun
+esperimento si sarebbe riusciti a capire la propria presenza o meno in
+esso).
