@@ -35,10 +35,10 @@ una definizione precisa di sistema di riferimento, in maniera da
 evitare errori o imprecisioni:
 \begin{definizione}
   Un sistema di riferimento \`e l'insieme di un sistema di coordinate
-  e di orologi, sicronizzati tra loro, in grado d'associare ad ogni
+  e di orologi, sincronizzati tra loro, in grado d'associare ad ogni
   evento un punto dello spazio e un istante di tempo. Un sistema di
   riferimento in cui ogni corpo non soggetto a forze \`e in quiete o
-  in moto rettilineo, \`e detto sistema di riferimento inerziale.
+  in moto rettilineo uniforme \`e detto sistema di riferimento inerziale.
 \end{definizione}
 La definizione precisa di evento verr\`a data pi\`u avanti, per ora
 possiamo prendere la nozione euristica che abbiamo di esso. Nei sistemi
@@ -54,8 +54,8 @@ precisamente, detti $S$ ed $S'$ i due sistemi inerziali, $S'$ in moto
 con velocit\`a $\mathsf{v}$ rispetto ad $S$ (velocit\`a costante in
 direzione e modulo), si aveva che, se
 \begin{displaymath}
-  t,\mathbf{x} \mbox{ coordinate in S} \qquad t',\mathbf{x}' \mbox{
-    coordinate in S' }
+  t,\mathbf{x} \mbox{ coordinate in $S$} \qquad t',\mathbf{x}' \mbox{
+    coordinate in $S'$ }
 \end{displaymath}
 allora
 \begin{equation}
@@ -103,7 +103,7 @@ luminifero (che porta la luce). Perch\'e si parlava di etere?
 %
 Come prima accennato, le leggi dell'elettromagnetismo non avevano la
 stessa forma in tutti i sistemi di riferimento, e quindi l'elegante
-forma proposta da Maxwell era corretta solo in un particolare di questi
+forma proposta da Maxwell era corretta solo in uno di questi
 sistemi. Si ipotizz\`o questo sistema uguale al sistema di riferimento
 delle stelle fisse, e lo si ribattezz\`o etere, il sistema in cui le
 leggi di Maxwell erano vere senza bisogno di modifiche.
@@ -208,10 +208,10 @@ $\vartheta$ (\`e l'angolo formato dalla terra e dal lato pi\`u corto
 dell'obbiettivo). Per valutare approssimativamente la velocit\`a della
 terra rispetto al sistema delle stelle fisse, consideriamo il sole
 come una stella fissa; la distanza terra sole vale
-$R_{\scriptscriptstyle TS}\:=\:150\cdot10^9 \:m$. Il periodo di
+$R_{\scriptscriptstyle TS}= \unit[150\cdot10^9]{m}$. Il periodo di
 rivoluzione attorno al sole vale
-$T\:=\:365\:gg\:\Longrightarrow\:\mathsf{v}\:=\:3\cdot10^4\:\rem{m}/\rem{s}$.
-Se il telescopio \`e lungo $l$ (farsi un disegno per meglio capire),
+$T=\unit[365]{d}\Longrightarrow\mathsf{v}=3\cdot10^4\rem{m}/\rem{s}$.
+Se il telescopio \`e lungo $l$ (fare un disegno per capire meglio),
 il tempo di percorrenza della luce \`e $t=l \cos \vartheta /c$. La
 distanza percorsa dal telescopio in $t$ \`e $x=\mathsf{v}t$.  L'angolo
 $\vartheta$ risulta dunque:
@@ -221,9 +221,9 @@ $\vartheta$ risulta dunque:
 \end{displaymath}
 Come si vede quest'angolo \`e molto piccolo, ma le misure sono in
 accordo con la teoria, cio\`e \`e effettivamente necessario inclinare
-i telescopi di $\vartheta$ per poter osservare i raggi
+i telescopi di $\vartheta$ per poter osservare i corpi
 celesti.\footnote{Tuttavia quest'esperimento non fu considerato
-  decisivo, poich\'e esso utilizzava le apprissimazioni di ottica
+  decisivo, poich\'e esso utilizzava le approssimazioni di ottica
   geometrica dell'elettromagnetismo.}
 \subsection{L'esperimento di Michelson e Morley}
 \index{Michelson-Morley, esperimento di}L'esperimento di Michelson e
@@ -279,16 +279,15 @@ un'onda emisferica).
 Dal disegno si capisce (\`e sufficiente usare il teorema di Pitagora)
 che $(ct)^2=l^2+(\mathsf{v}t)^2$, da cui risulta:
 \begin{equation}
-  t_{\perp}=2t=\frac{2l}{c}\frac{1}{\sqrt{1-\frac{\mathsf{v}^2}{c^2}}}.
+  t_{\perp}=2t=\dfrac{2l}{c}\dfrac{1}{\sqrt{1-\dfrac{\mathsf{v}^2}{c^2}}}.
   \label{eq:mim1}
 \end{equation}
-L'altro raggio invece fa il percorso, nell'etere, in figura
-\ref{fig:mim2}. \setlength{\unitlength}{1mm}
+L'altro raggio invece fa il percorso, nell'etere, in figura \ref{fig:mim2}. \setlength{\unitlength}{1mm}
 \begin{figure}[!h]
   \begin{center}
     \begin{picture}(65,28) \put(7.5,7.5){\line(1,1){10}}
       \put(6,18){\scriptsize Specchio
-        semi-rifrangente}\put(12.5,12.5){\line(1,0){36}}
+        semirifrangente}\put(12.5,12.5){\line(1,0){36}}
       \put(27.5,12.5){\vector(1,0){8}}
       \put(27.5,12.5){\vector(-1,0){5}} \put(48.5,2.5){\line(0,1){20}}
       \multiput(48.5,2.5)(0,4){6}{\line(1,1){5}}
@@ -302,10 +301,10 @@ L'altro raggio invece fa il percorso, nell'etere, in figura
 Si pu\`o facilmente capire che
 $t_{\sslash}=\frac{l}{c-v}+\frac{l}{v+c}$, da cui:
 \begin{equation}
-  t_{\sslash}=\frac{2l}{c}\cdot\frac{1}{1-\frac{\mathsf{v}^2}{c^2}}
+  t_{\sslash}=\dfrac{2l}{c}\cdot\dfrac{1}{1-\frac{\mathsf{v}^2}{c^2}}
   \label{eq:mim2}
 \end{equation}
-Dal momento che $ \mathsf{v} < < c $ possiamo sviluppare in serie di $v^2 / c^2$
+Dal momento che $ \mathsf{v} \ll c $ possiamo sviluppare in serie di $v^2 / c^2$
 la (\ref{eq:mim1}) e la (\ref{eq:mim2}), ottenendo:
 \begin{equation}
   t_{\perp}=\frac{2l}{c}\left(1+\frac{1}{2}\frac{\mathsf{v}^2}{c^2}\right)
@@ -332,10 +331,10 @@ era:
   \frac{\Delta\lambda}{\lambda}=\frac{l}{\lambda}\frac{\mathsf{v}^2}{c^2}
 \end{displaymath}
 L'esperimento del 1887 (quello eseguito con i migliori accorgimenti
-per diminuire gli errori di misura), aveva $l=11m$,
-$\lambda=6\cdot10^{-7}m$, $ \frac{v}{c}=10^{-4} $. Da questi dati
+per diminuire gli errori di misura), aveva $l=\unit[11]{m}$,
+$\lambda=\unit[6\cdot10^{-7}]{m}$, $v=10^{-4}c$. Da questi dati
 risulta $\Delta n / n =0.18 \pm 0.01$. Tuttavia i risultati
-sperimentali davano $n = 0$: questo fatto rimaneva inspiegabile:
+sperimentali davano $\Delta n < 0.01$, e  questo fatto rimaneva inspiegabile:
 l'etere si muoveva con la terra? Come era possibile interpretare tale
 fenomeno?
 \begin{observazione}[Fitzgerald e Lorentz] Una prima risoluzione del
@@ -350,18 +349,18 @@ fenomeno?
 \end{observazione}
 \section{Princ\`ipi di relativit\`a}
 Successivamente la cosa venne affrontata da un punto di vista
-matematico: tra il 1902 e il 1905, Poincar\`e si avvicin\`o al
+matematico: tra il 1902 e il 1905, Poincar\'e si avvicin\`o al
 principio di relativit\`a einsteniano, dicendo:
-\begin{principio}[di Relativit\`a di Poincar\`e]\index{principio di
+\begin{principio}[di relativit\`a di Poincar\'e]\index{principio di
     relativit\`a!di Poincar\'e}
   Le leggi della fisica devono essere covarianti (avere cio\`e la
   stessa forma) per sistemi inerziali.
 \end{principio}
-Poincar\`e trov\`o dunque le trasformazioni di coordinate che resero
+Poincar\'e trov\`o dunque le trasformazioni di coordinate che resero
 l'elettrodinamica compatibile con il principio di relativit\`a. Tali
 trasformazioni sono le trasformazioni di Lorentz, che costituiscono un
 gruppo; tale gruppo pu\`o essere ampliato ulteriormente, mantenendo la
-sua struttura, dando origine al gruppo di Poincar\`e.
+sua struttura, dando origine al gruppo di Poincar\'e.
 
 Venne poi la volta di Einstein (1905), il quale pose alla base della
 sua teoria due principi:
@@ -372,7 +371,7 @@ sua teoria due principi:
 \item La velocit\`a della luce \`e uguale in tutti i sistemi di
   riferimento inerziali
 \end{dinglist}
-Quale fu la grande innovazione di Einstein rispetto a Poincar\`e?  Il
+Quale fu la grande innovazione di Einstein rispetto a Poincar\'e?  Il
 fatto che egli elimin\`o il concetto di etere.\footnote{Ad inizio
   capitolo abbiamo imbrogliato il lettore, dicendo che la relativit\`a
   ristretta nasce per i contrasti tra elettromagnetismo e meccanica:
@@ -395,8 +394,8 @@ base della sua teoria.
     realt\`a questo primo assioma era implicito nella sua trattazione}
 \end{dinglist}
 \begin{dinglist}{203}
-\item Si ha l'equivalente del principio di relativit\`a di Poincar\`e:
-  \begin{principio}[di Relativit\`a einsteniano]\index{principio di
+\item Si ha l'equivalente del principio di relativit\`a di Poincar\'e:
+  \begin{principio}[di relativit\`a einsteniano]\index{principio di
       relativit\`a!di Einstein} Le leggi della
     fisica hanno la stessa forma in tutti i sistemi inerziali.
   \end{principio}
